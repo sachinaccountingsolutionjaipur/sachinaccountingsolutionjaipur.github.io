@@ -429,10 +429,6 @@ footer{
 
 <div class="wrap">
 
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
 
   <div class="brand">
@@ -456,11 +452,6 @@ footer{
   </nav>
 
 </header>
-
-
-<!-- =========================
-     HERO
-========================= -->
 
 <section class="hero">
 
@@ -502,11 +493,6 @@ footer{
   </div>
 
 </section>
-
-
-<!-- =========================
-     SERVICES
-========================= -->
 
 <section>
 
@@ -568,11 +554,6 @@ footer{
   </div>
 
 </section>
-
-
-<!-- =========================
-     REQUIREMENT
-========================= -->
 
 <section id="requirement">
 
@@ -665,11 +646,6 @@ footer{
 
 </section>
 
-
-<!-- =========================
-     REVIEWS
-========================= -->
-
 <section id="reviews">
 
   <h2 class="section-title">
@@ -697,9 +673,6 @@ footer{
 
     </div>
 
-
-    <!-- REVIEW FORM -->
-
     <div class="form-card"
          style="flex:1;min-width:min(100%,420px)">
 
@@ -720,14 +693,14 @@ footer{
              placeholder="Enter your name">
 
       <label>
-        Mobile Number *
+        Mobile Number (Optional)
       </label>
 
       <input id="reviewPhone"
              type="tel"
              maxlength="10"
              inputmode="numeric"
-             placeholder="Enter 10 digit mobile number">
+             placeholder="Optional - 10 digit mobile number">
 
       <label>
         Rating *
@@ -798,19 +771,11 @@ footer{
 
   </div>
 
-
-  <!-- PUBLIC REVIEWS -->
-
   <div id="reviewList"
        class="review-list">
   </div>
 
 </section>
-
-
-<!-- =========================
-     LOGIN MODAL
-========================= -->
 
 <div id="loginModal"
      class="modal">
@@ -856,11 +821,6 @@ footer{
   </div>
 
 </div>
-
-
-<!-- =========================
-     REGISTER MODAL
-========================= -->
 
 <div id="registerModal"
      class="modal">
@@ -915,11 +875,6 @@ footer{
 
 </div>
 
-
-<!-- =========================
-     ADMIN MODAL
-========================= -->
-
 <div id="adminModal"
      class="modal">
 
@@ -952,12 +907,8 @@ footer{
          class="msg">
     </div>
 
-
     <div id="adminContent"
          class="hidden">
-
-
-      <!-- USERS -->
 
       <h3 style="margin-top:25px;margin-bottom:10px">
         Registered Users
@@ -970,14 +921,12 @@ footer{
           <thead>
 
             <tr>
-
               <th>Name</th>
               <th>Mobile</th>
               <th>Registered</th>
               <th>Last Login</th>
               <th>Login Count</th>
               <th>Contact</th>
-
             </tr>
 
           </thead>
@@ -988,9 +937,6 @@ footer{
         </table>
 
       </div>
-
-
-      <!-- REQUIREMENTS -->
 
       <h3 style="margin-top:30px;margin-bottom:10px">
         Customer Requirements
@@ -1003,7 +949,6 @@ footer{
           <thead>
 
             <tr>
-
               <th>Name</th>
               <th>Mobile</th>
               <th>Service</th>
@@ -1011,7 +956,6 @@ footer{
               <th>Email</th>
               <th>Submitted</th>
               <th>Contact</th>
-
             </tr>
 
           </thead>
@@ -1022,9 +966,6 @@ footer{
         </table>
 
       </div>
-
-
-      <!-- REVIEWS ADMIN -->
 
       <h3 style="margin-top:30px;margin-bottom:10px">
         Customer Reviews
@@ -1037,14 +978,12 @@ footer{
           <thead>
 
             <tr>
-
               <th>Name</th>
               <th>Mobile</th>
               <th>Rating</th>
               <th>Review</th>
               <th>Status</th>
               <th>Submitted</th>
-
             </tr>
 
           </thead>
@@ -1068,31 +1007,17 @@ footer{
 
 </div>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
-
 <footer>
   © 2026 Sachin Accounting Solution • Jaipur
 </footer>
 
 </div>
 
-
 <script>
-
-/* =================================================
-   GOOGLE APPS SCRIPT API
-================================================= */
 
 const API_URL =
 "https://script.google.com/macros/s/AKfycbwyLG9lDvhD9PSHapn0jyKArLk31Mz6_7xVVFhmG0tM6r54g4cgt5P3HOQuMqPbeSwv/exec";
 
-
-/* =================================================
-   MODAL
-================================================= */
 
 function openModal(id){
 
@@ -1103,6 +1028,7 @@ function openModal(id){
 
 }
 
+
 function closeModal(id){
 
   document
@@ -1112,8 +1038,6 @@ function closeModal(id){
 
 }
 
-
-/* Close modal outside */
 
 document
 .querySelectorAll(".modal")
@@ -1132,10 +1056,6 @@ document
 });
 
 
-/* =================================================
-   API HELPER
-================================================= */
-
 async function api(action,data={}){
 
   const params =
@@ -1146,13 +1066,18 @@ async function api(action,data={}){
     action
   );
 
-  Object.keys(data)
-  .forEach(function(key){
+  Object.keys(data).forEach(function(key){
 
-    params.append(
-      key,
-      data[key]
-    );
+    const value = data[key];
+
+    if(value !== undefined && value !== null){
+
+      params.append(
+        key,
+        String(value)
+      );
+
+    }
 
   });
 
@@ -1165,18 +1090,41 @@ async function api(action,data={}){
     await fetch(
       url,
       {
-        method:"GET"
+        method:"GET",
+        cache:"no-store"
       }
     );
 
-  return await response.json();
+  const text =
+    await response.text();
+
+  if(!response.ok){
+
+    throw new Error(
+      "HTTP " + response.status
+    );
+
+  }
+
+  try{
+
+    return JSON.parse(text);
+
+  }catch(error){
+
+    console.error(
+      "Invalid API response:",
+      text
+    );
+
+    throw new Error(
+      "Invalid server response."
+    );
+
+  }
 
 }
 
-
-/* =================================================
-   REGISTER
-================================================= */
 
 async function registerUser(){
 
@@ -1255,10 +1203,6 @@ async function registerUser(){
 }
 
 
-/* =================================================
-   LOGIN
-================================================= */
-
 async function loginUser(){
 
   const phone =
@@ -1308,8 +1252,6 @@ async function loginUser(){
         "Login successful. Welcome " +
         result.name;
 
-      /* Auto fill */
-
       setTimeout(function(){
 
         fillUserDetails();
@@ -1331,10 +1273,6 @@ async function loginUser(){
 
 }
 
-
-/* =================================================
-   REQUIREMENT
-================================================= */
 
 async function submitRequirement(){
 
@@ -1453,11 +1391,8 @@ async function submitRequirement(){
 }
 
 
-/* =================================================
-   REVIEW RATING
-================================================= */
-
 let selectedRating = 0;
+
 
 function selectRating(rating){
 
@@ -1484,10 +1419,6 @@ function selectRating(rating){
 
 }
 
-
-/* =================================================
-   SUBMIT REVIEW
-================================================= */
 
 async function submitReview(){
 
@@ -1524,10 +1455,10 @@ async function submitReview(){
   }
 
 
-  if(!/^\d{10}$/.test(phone)){
+  if(phone && !/^\d{10}$/.test(phone)){
 
     msg.textContent =
-      "Please enter a valid 10 digit mobile number.";
+      "Please enter a valid 10 digit mobile number, or leave it blank.";
 
     return;
 
@@ -1605,11 +1536,6 @@ async function submitReview(){
 
       selectRating(0);
 
-      /*
-       * Pending review public list me nahi aayega.
-       * Admin sheet me save hoga.
-       */
-
       setTimeout(function(){
 
         loadReviews();
@@ -1621,18 +1547,17 @@ async function submitReview(){
   }catch(error){
 
     msg.textContent =
-      "Connection error. Please try again.";
+      "Could not submit review. Please check your internet connection and try again.";
 
-    console.error(error);
+    console.error(
+      "Review submit error:",
+      error
+    );
 
   }
 
 }
 
-
-/* =================================================
-   LOAD PUBLIC REVIEWS
-================================================= */
 
 async function loadReviews(){
 
@@ -1768,10 +1693,6 @@ async function loadReviews(){
 }
 
 
-/* =================================================
-   ADMIN PANEL
-================================================= */
-
 async function loadUsers(){
 
   const pin =
@@ -1836,10 +1757,6 @@ async function loadUsers(){
       "hidden"
     );
 
-
-    /* =========================
-       USERS TABLE
-    ========================= */
 
     const tbody =
       document
@@ -1914,10 +1831,6 @@ async function loadUsers(){
 
     });
 
-
-    /* =========================
-       REQUIREMENTS TABLE
-    ========================= */
 
     const qtbody =
       document
@@ -1996,10 +1909,6 @@ async function loadUsers(){
 
     });
 
-
-    /* =========================
-       REVIEWS TABLE
-    ========================= */
 
     const rtbody =
       document
@@ -2099,10 +2008,6 @@ async function loadUsers(){
 }
 
 
-/* =================================================
-   HTML ESCAPE
-================================================= */
-
 function esc(value){
 
   return String(
@@ -2138,10 +2043,6 @@ function esc(value){
 
 }
 
-
-/* =================================================
-   AUTO FILL USER DETAILS
-================================================= */
 
 function fillUserDetails(){
 
@@ -2230,10 +2131,6 @@ function fillUserDetails(){
 
 }
 
-
-/* =================================================
-   PAGE LOAD
-================================================= */
 
 document.addEventListener(
   "DOMContentLoaded",
