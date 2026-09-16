@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,49 +8,238 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#07111f;color:#fff;min-height:100vh}
+body{
+  font-family:Arial,sans-serif;
+  background:#07111f;
+  color:#fff;
+  min-height:100vh
+}
 button,input,select,textarea{font:inherit}
 .wrap{max-width:1100px;margin:auto;padding:24px}
-header{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:12px 0 25px}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+  padding:12px 0 25px
+}
 .brand{font-size:22px;font-weight:800}
-.brand span,.highlight{color:#63e6be}
-nav{display:flex;gap:8px;flex-wrap:wrap}
-button,.btn{border:0;border-radius:10px;padding:11px 16px;cursor:pointer;text-decoration:none;color:#fff;background:#15803d;font-weight:700}
-.secondary{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2)}
+.brand span{color:#63e6be}
+
+nav{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap
+}
+
+button,.btn{
+  border:0;
+  border-radius:10px;
+  padding:11px 16px;
+  cursor:pointer;
+  text-decoration:none;
+  color:#fff;
+  background:#15803d;
+  font-weight:700
+}
+.secondary{
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.2)
+}
+
 .hero{padding:65px 0 45px}
-.badge{display:inline-block;padding:8px 13px;border:1px solid #ffffff33;border-radius:30px;background:#ffffff10;margin-bottom:18px}
-h1{font-size:clamp(42px,7vw,78px);line-height:1.02;margin-bottom:18px}
+.badge{
+  display:inline-block;
+  padding:8px 13px;
+  border:1px solid #ffffff33;
+  border-radius:30px;
+  background:#ffffff10;
+  margin-bottom:18px
+}
+h1{
+  font-size:clamp(42px,7vw,78px);
+  line-height:1.02;
+  margin-bottom:18px
+}
 h2{font-size:34px;margin-bottom:15px}
-.lead{font-size:19px;line-height:1.6;color:#d9e4f0;max-width:800px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}
-.card{padding:22px;border-radius:17px;background:#ffffff0d;border:1px solid #ffffff1c}
+.highlight{color:#63e6be}
+.lead{
+  font-size:19px;
+  line-height:1.6;
+  color:#d9e4f0;
+  max-width:800px
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin:28px 0
+}
+.card{
+  padding:22px;
+  border-radius:17px;
+  background:#ffffff0d;
+  border:1px solid #ffffff1c
+}
 .card h3{margin-bottom:8px}
-.card p{color:#cbd5e1;line-height:1.5}
-.requirement{margin:45px 0;padding:28px;border-radius:20px;background:#ffffff0d;border:1px solid #ffffff1c}
-.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.formgrid .full{grid-column:1/-1}
-input,select,textarea{width:100%;padding:13px;border-radius:10px;border:1px solid #ffffff25;background:#07111f;color:#fff}
-textarea{min-height:120px;resize:vertical}
-.modal{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;padding:20px;z-index:50}
+.card p{
+  color:#cbd5e1;
+  line-height:1.5
+}
+
+section{padding:55px 0}
+.section-title{margin-bottom:22px}
+
+.form-card{
+  max-width:700px;
+  padding:25px;
+  border-radius:18px;
+  background:#ffffff0d;
+  border:1px solid #ffffff1c
+}
+
+label{
+  display:block;
+  margin-top:12px;
+  margin-bottom:5px;
+  font-weight:700
+}
+
+input,select,textarea{
+  width:100%;
+  padding:13px;
+  margin:4px 0 7px;
+  border-radius:10px;
+  border:1px solid #ffffff25;
+  background:#07111f;
+  color:#fff;
+  outline:none
+}
+textarea{
+  min-height:120px;
+  resize:vertical
+}
+input:focus,select:focus,textarea:focus{
+  border-color:#63e6be
+}
+
+.submit-btn{
+  width:100%;
+  margin-top:12px;
+  background:#15803d
+}
+
+.info{
+  color:#cbd5e1;
+  line-height:1.6;
+  margin-top:10px
+}
+
+.contact-box{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:20px
+}
+
+.whatsapp{background:#16a34a}
+.call{background:#2563eb}
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:#000b;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  z-index:50
+}
 .modal.show{display:flex}
-.box{background:#0d1b2a;border:1px solid #ffffff25;border-radius:18px;padding:25px;width:min(950px,100%);max-height:90vh;overflow:auto}
-.smallbox{width:min(440px,100%)}
+
+.box{
+  background:#0d1b2a;
+  border:1px solid #ffffff25;
+  border-radius:18px;
+  padding:25px;
+  width:min(440px,100%);
+  max-height:90vh;
+  overflow:auto
+}
 .box h2{margin-bottom:18px}
-.box input,.box select,.box textarea{margin:7px 0}
-.msg{min-height:24px;color:#fbbf24;margin:8px 0}
-.close{float:right;background:#ffffff12}
-.tablewrap{overflow:auto;margin-top:15px}
-table{width:100%;border-collapse:collapse}
-th,td{text-align:left;padding:11px;border-bottom:1px solid #ffffff18;white-space:nowrap}
-th{color:#63e6be}
-.section-title{margin-top:28px}
-footer{padding:40px 0;color:#94a3b8;text-align:center}
-@media(max-width:750px){
-.cards{grid-template-columns:1fr}
-.formgrid{grid-template-columns:1fr}
-.formgrid .full{grid-column:auto}
-.hero{padding-top:35px}
-header{align-items:flex-start;flex-direction:column}
+.box input,.box select,.box textarea{
+  width:100%;
+  padding:13px;
+  margin:7px 0;
+  border-radius:10px;
+  border:1px solid #ffffff25;
+  background:#07111f;
+  color:#fff
+}
+.msg{
+  min-height:24px;
+  color:#fbbf24;
+  margin:8px 0
+}
+.close{
+  float:right;
+  background:#ffffff15;
+  padding:7px 11px
+}
+
+.admin-wrap{
+  overflow-x:auto;
+  margin-top:18px
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:700px
+}
+th,td{
+  padding:11px;
+  border-bottom:1px solid #ffffff18;
+  text-align:left;
+  vertical-align:top
+}
+th{
+  background:#ffffff0d
+}
+td{
+  color:#dbeafe
+}
+
+.small{
+  font-size:13px;
+  color:#94a3b8
+}
+
+.hidden{display:none!important}
+
+footer{
+  border-top:1px solid #ffffff15;
+  padding:30px 0;
+  margin-top:30px;
+  color:#94a3b8;
+  text-align:center
+}
+
+@media(max-width:800px){
+  .cards{grid-template-columns:1fr}
+  header{align-items:flex-start;flex-direction:column}
+  nav{width:100%}
+  nav button{flex:1}
+  .hero{padding-top:35px}
+}
+
+@media(max-width:500px){
+  .wrap{padding:17px}
+  h1{font-size:44px}
+  h2{font-size:28px}
+  .contact-box a,.contact-box button{width:100%;text-align:center}
 }
 </style>
 </head>
@@ -61,667 +249,759 @@ header{align-items:flex-start;flex-direction:column}
 <div class="wrap">
 
 <header>
-<div class="brand">Sachin <span>Accounting</span> Solution</div>
+  <div class="brand">
+    SACHIN <span>ACCOUNTING SOLUTION</span>
+  </div>
 
-<nav>
-<button class="secondary" onclick="openModal('login')">Login</button>
-<button onclick="openModal('register')">Register</button>
-<button class="secondary" onclick="openModal('admin')">Admin</button>
-</nav>
+  <nav>
+    <button class="secondary" onclick="openModal('loginModal')">Login</button>
+    <button onclick="openModal('registerModal')">Register</button>
+    <button class="secondary" onclick="openModal('adminModal')">Admin</button>
+  </nav>
 </header>
 
 
+<!-- HERO -->
 <section class="hero">
+  <div class="badge">Jaipur • Accounting • GST • TDS • Tally</div>
 
-<span class="badge">ACCOUNTING • GST • TDS • TALLY • EXCEL</span>
+  <h1>
+    Smart Accounting<br>
+    <span class="highlight">Simple Business</span>
+  </h1>
 
-<h1>
-Professional <span class="highlight">Accounts</span> Support
-</h1>
+  <p class="lead">
+    Professional accounting and business support services for individuals,
+    startups and businesses. Get help with GST, TDS, Tally Prime,
+    bookkeeping, Excel and accounting work.
+  </p>
 
-<p class="lead">
-Accounting, GST, TDS, Tally Prime, Excel, bookkeeping and reconciliation services in Jaipur.
-</p>
+  <div class="contact-box">
+    <a class="btn whatsapp"
+       href="https://wa.me/917357891332"
+       target="_blank">
+       WhatsApp Us
+    </a>
 
-<div style="margin-top:25px;display:flex;gap:10px;flex-wrap:wrap">
+    <a class="btn call"
+       href="tel:+917357891332">
+       Call Now
+    </a>
 
-<a class="btn" href="https://wa.me/917357891332">
-WhatsApp Me
-</a>
-
-<a class="btn secondary" href="tel:+917357891332">
-Call +91 73578 91332
-</a>
-
-<button onclick="document.getElementById('requirement').scrollIntoView({behavior:'smooth'})">
-Submit Your Requirement
-</button>
-
-</div>
+    <a class="btn secondary"
+       href="https://instagram.com/sachin_accounting_solution"
+       target="_blank">
+       Instagram
+    </a>
+  </div>
 </section>
 
 
+<!-- SERVICES -->
 <section>
+  <h2 class="section-title">Our Services</h2>
 
-<h2>What I can help you with</h2>
+  <div class="cards">
 
-<div class="cards">
+    <div class="card">
+      <h3>GST Services</h3>
+      <p>
+        GST registration, return filing, reconciliation and
+        other GST-related accounting support.
+      </p>
+    </div>
 
-<div class="card">
-<h3>📒 Bookkeeping</h3>
-<p>Daily accounting, ledger posting and basic books maintenance.</p>
-</div>
+    <div class="card">
+      <h3>TDS Services</h3>
+      <p>
+        TDS calculation, return filing and accounting assistance.
+      </p>
+    </div>
 
-<div class="card">
-<h3>🧾 GST Support</h3>
-<p>GST data preparation, return support, reconciliation and compliance assistance.</p>
-</div>
+    <div class="card">
+      <h3>Tally Prime</h3>
+      <p>
+        Tally data entry, bookkeeping, ledger management and
+        accounting support.
+      </p>
+    </div>
 
-<div class="card">
-<h3>💼 TDS Support</h3>
-<p>TDS calculation, deduction checks and working-paper support.</p>
-</div>
+    <div class="card">
+      <h3>Bookkeeping</h3>
+      <p>
+        Daily accounting, purchase, sales, expenses,
+        receipts and payment records.
+      </p>
+    </div>
 
-<div class="card">
-<h3>💻 Tally Prime</h3>
-<p>Sales, purchase, receipt, payment, journal and inventory entries.</p>
-</div>
+    <div class="card">
+      <h3>Excel Work</h3>
+      <p>
+        Excel reports, data management, calculations,
+        formatting and accounting sheets.
+      </p>
+    </div>
 
-<div class="card">
-<h3>📊 Excel Work</h3>
-<p>Reports, formulas, party-wise tracking and reconciliation sheets.</p>
-</div>
+    <div class="card">
+      <h3>Accounting Support</h3>
+      <p>
+        Complete accounting assistance according to
+        your business requirements.
+      </p>
+    </div>
 
-<div class="card">
-<h3>🔎 Reconciliation</h3>
-<p>Ledger checking, outstanding follow-up and invoice/payment matching.</p>
-</div>
-
-</div>
+  </div>
 </section>
 
 
-<section class="requirement" id="requirement">
+<!-- REQUIREMENT -->
+<section id="requirement">
+  <h2 class="section-title">Submit Your Requirement</h2>
 
-<h2>Submit Your Requirement</h2>
+  <div class="form-card">
 
-<p class="lead" style="font-size:16px;margin-bottom:18px">
-Apni requirement bhejiye. Hum aapse WhatsApp ya phone par contact karenge.
-</p>
+    <p class="info">
+      Apni requirement submit karein. Hamari team aapse
+      jaldi contact karegi.
+    </p>
 
-<div class="formgrid">
+    <label for="qname">Name *</label>
+    <input id="qname" type="text" placeholder="Enter your name">
 
-<div>
-<input id="qname" placeholder="Your Name">
-</div>
+    <label for="qphone">Mobile Number *</label>
+    <input id="qphone"
+           type="tel"
+           maxlength="10"
+           placeholder="Enter 10 digit mobile number">
 
-<div>
-<input id="qphone" placeholder="Mobile Number">
-</div>
+    <label for="qservice">Service *</label>
+    <select id="qservice">
+      <option value="">Select Service</option>
+      <option>GST Services</option>
+      <option>TDS Services</option>
+      <option>Tally Prime</option>
+      <option>Bookkeeping</option>
+      <option>Excel Work</option>
+      <option>Accounting Support</option>
+      <option>Other</option>
+    </select>
 
-<div>
-<select id="qservice">
-<option value="">Select Service</option>
-<option>Accounting</option>
-<option>GST</option>
-<option>TDS</option>
-<option>Tally Prime</option>
-<option>Excel</option>
-<option>Bookkeeping</option>
-<option>Reconciliation</option>
-<option>Other</option>
-</select>
-</div>
+    <label for="qtext">Requirement *</label>
+    <textarea id="qtext"
+              placeholder="Write your requirement"></textarea>
 
-<div>
-<input id="qemail" placeholder="Email (optional)">
-</div>
+    <button class="submit-btn" onclick="submitRequirement()">
+      Submit Requirement
+    </button>
 
-<div class="full">
-<textarea id="qrequirement" placeholder="Write your requirement here..."></textarea>
-</div>
+    <div id="qmsg" class="msg"></div>
 
-</div>
-
-<div class="msg" id="qmsg"></div>
-
-<button onclick="submitRequirement()">
-Submit Requirement
-</button>
-
+  </div>
 </section>
 
 
-<section style="margin-top:35px">
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="modal">
 
-<h2>Let's Connect</h2>
+  <div class="box">
 
-<p class="lead">
-Jaipur, Rajasthan • WhatsApp: +91 73578 91332 • Instagram: @sachin_accounting_solution
-</p>
+    <button class="close" onclick="closeModal('loginModal')">✕</button>
 
-</section>
+    <h2>Login</h2>
+
+    <label>Mobile Number</label>
+    <input id="lphone"
+           type="tel"
+           maxlength="10"
+           placeholder="10 digit mobile">
+
+    <label>Password</label>
+    <input id="lpw"
+           type="password"
+           placeholder="Password">
+
+    <button style="width:100%;margin-top:8px"
+            onclick="loginUser()">
+      Login
+    </button>
+
+    <div id="lmsg" class="msg"></div>
+
+  </div>
+
+</div>
+
+
+<!-- REGISTER MODAL -->
+<div id="registerModal" class="modal">
+
+  <div class="box">
+
+    <button class="close" onclick="closeModal('registerModal')">✕</button>
+
+    <h2>Create Account</h2>
+
+    <label>Name</label>
+    <input id="rname"
+           type="text"
+           placeholder="Your full name">
+
+    <label>Mobile Number</label>
+    <input id="rphone"
+           type="tel"
+           maxlength="10"
+           placeholder="10 digit mobile">
+
+    <label>Password</label>
+    <input id="rpw"
+           type="password"
+           placeholder="Minimum 6 characters">
+
+    <button style="width:100%;margin-top:8px"
+            onclick="registerUser()">
+      Register
+    </button>
+
+    <div id="rmsg" class="msg"></div>
+
+  </div>
+
+</div>
+
+
+<!-- ADMIN MODAL -->
+<div id="adminModal" class="modal">
+
+  <div class="box" style="width:min(1000px,100%)">
+
+    <button class="close" onclick="closeModal('adminModal')">✕</button>
+
+    <h2>Admin Panel</h2>
+
+    <label>Admin PIN</label>
+
+    <input id="apin"
+           type="password"
+           placeholder="Enter admin PIN">
+
+    <button style="width:100%;margin-top:8px"
+            onclick="loadUsers()">
+      Open Admin Panel
+    </button>
+
+    <div id="amsg" class="msg"></div>
+
+    <div id="adminContent" class="hidden">
+
+      <h3 style="margin-top:25px;margin-bottom:10px">
+        Registered Users
+      </h3>
+
+      <div class="admin-wrap">
+
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>Registered</th>
+              <th>Last Login</th>
+              <th>Login Count</th>
+              <th>Contact</th>
+            </tr>
+          </thead>
+
+          <tbody id="tbody"></tbody>
+        </table>
+
+      </div>
+
+
+      <h3 style="margin-top:30px;margin-bottom:10px">
+        Customer Requirements
+      </h3>
+
+      <div class="admin-wrap">
+
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>Service</th>
+              <th>Requirement</th>
+              <th>Email</th>
+              <th>Submitted</th>
+              <th>Contact</th>
+            </tr>
+          </thead>
+
+          <tbody id="qtbody"></tbody>
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
 
 <footer>
-© 2026 Sachin Accounting Solution
+  © 2026 Sachin Accounting Solution • Jaipur
 </footer>
 
 </div>
 
 
-<!-- REGISTER -->
-
-<div class="modal" id="register">
-
-<div class="box smallbox">
-
-<button class="close" onclick="closeModal('register')">×</button>
-
-<h2>Register</h2>
-
-<input id="rname" placeholder="Your Name">
-
-<input id="rphone" placeholder="Mobile Number">
-
-<input id="rpass" type="password" placeholder="Password">
-
-<div class="msg" id="rmsg"></div>
-
-<button onclick="registerUser()">
-Create Account
-</button>
-
-</div>
-</div>
-
-
-<!-- LOGIN -->
-
-<div class="modal" id="login">
-
-<div class="box smallbox">
-
-<button class="close" onclick="closeModal('login')">×</button>
-
-<h2>Login</h2>
-
-<input id="lphone" placeholder="Mobile Number">
-
-<input id="lpass" type="password" placeholder="Password">
-
-<div class="msg" id="lmsg"></div>
-
-<button onclick="loginUser()">
-Login
-</button>
-
-</div>
-</div>
-
-
-<!-- ADMIN -->
-
-<div class="modal" id="admin">
-
-<div class="box">
-
-<button class="close" onclick="closeModal('admin')">×</button>
-
-<h2>Admin Panel</h2>
-
-<input id="apin" type="password" placeholder="Admin PIN">
-
-<div class="msg" id="amsg"></div>
-
-<button onclick="loadUsers()">
-View Users & Requirements
-</button>
-
-
-<h2 class="section-title">
-Registered Users
-</h2>
-
-<div class="tablewrap">
-
-<table>
-
-<thead>
-
-<tr>
-<th>Name</th>
-<th>Mobile</th>
-<th>Registered</th>
-<th>Last Login</th>
-<th>Logins</th>
-<th>Contact</th>
-</tr>
-
-</thead>
-
-<tbody id="tbody">
-</tbody>
-
-</table>
-
-</div>
-
-
-<h2 class="section-title">
-Customer Requirements
-</h2>
-
-<div class="tablewrap">
-
-<table>
-
-<thead>
-
-<tr>
-<th>Name</th>
-<th>Mobile</th>
-<th>Service</th>
-<th>Requirement</th>
-<th>Submitted</th>
-<th>Contact</th>
-</tr>
-
-</thead>
-
-<tbody id="reqbody">
-</tbody>
-
-</table>
-
-</div>
-
-</div>
-</div>
-
-
 <script>
 
-const API_URL =
-"https://script.google.com/macros/s/AKfycbwavlU5EWYNzsASYOf0m4v0n81luo-Z-8uP7xQju76vGnquyzotFEv2xK-UFrZSA4obgA/exec";
+/* =================================================
+   GOOGLE APPS SCRIPT API
+   ================================================= */
 
+const API_URL =
+"https://script.google.com/macros/s/AKfycbwyLG9lDvhD9PSHapn0jyKArLk31Mz6_7xVVFhmG0tM6r54g4cgt5P3HOQuMqPbeSwv/exec";
+
+
+/* =================================================
+   MODAL
+   ================================================= */
 
 function openModal(id){
-document.getElementById(id).classList.add("show");
+  document.getElementById(id).classList.add("show");
 }
-
 
 function closeModal(id){
-document.getElementById(id).classList.remove("show");
+  document.getElementById(id).classList.remove("show");
 }
 
 
-function showMsg(id,text){
-document.getElementById(id).textContent=text;
-}
+/* Close modal when clicking outside */
 
+document.querySelectorAll(".modal").forEach(function(modal){
+
+  modal.addEventListener("click",function(e){
+
+    if(e.target === modal){
+      modal.classList.remove("show");
+    }
+
+  });
+
+});
+
+
+/* =================================================
+   API HELPER
+   ================================================= */
 
 async function api(action,data={}){
 
-const params=new URLSearchParams({
-action,
-...data
-});
+  const params = new URLSearchParams();
 
-const response=await fetch(
-API_URL+"?"+params.toString()
-);
+  params.append("action",action);
 
-return await response.json();
+  Object.keys(data).forEach(function(key){
+    params.append(key,data[key]);
+  });
 
+  const url = API_URL + "?" + params.toString();
+
+  const response = await fetch(url,{
+    method:"GET"
+  });
+
+  return await response.json();
 }
 
 
-/* REGISTER */
+/* =================================================
+   REGISTER
+   ================================================= */
 
 async function registerUser(){
 
-const name=document.getElementById("rname").value.trim();
-const phone=document.getElementById("rphone").value.trim();
-const password=document.getElementById("rpass").value;
+  const name =
+    document.getElementById("rname").value.trim();
 
-if(!name || !phone || !password){
+  const phone =
+    document.getElementById("rphone").value.trim();
 
-showMsg(
-"rmsg",
-"Please fill all fields."
-);
+  const password =
+    document.getElementById("rpw").value;
 
-return;
+  const msg =
+    document.getElementById("rmsg");
+
+  msg.textContent = "Please wait...";
+
+  try{
+
+    const result = await api("register",{
+      name:name,
+      phone:phone,
+      password:password
+    });
+
+    msg.textContent = result.message || "";
+
+    if(result.ok){
+
+      document.getElementById("rname").value="";
+      document.getElementById("rphone").value="";
+      document.getElementById("rpw").value="";
+
+      setTimeout(function(){
+
+        closeModal("registerModal");
+        openModal("loginModal");
+
+      },1000);
+
+    }
+
+  }catch(error){
+
+    msg.textContent =
+      "Connection error. Please try again.";
+
+    console.error(error);
+
+  }
+
 }
 
-showMsg("rmsg","Registering...");
 
-try{
-
-const result=await api(
-"register",
-{
-name,
-phone,
-password
-}
-);
-
-showMsg(
-"rmsg",
-result.message || "Registration complete."
-);
-
-if(result.ok){
-
-document.getElementById("rname").value="";
-document.getElementById("rphone").value="";
-document.getElementById("rpass").value="";
-
-}
-
-}catch(error){
-
-showMsg(
-"rmsg",
-"Connection error. Please try again."
-);
-
-}
-
-}
-
-
-/* LOGIN */
+/* =================================================
+   LOGIN
+   ================================================= */
 
 async function loginUser(){
 
-const phone=document.getElementById("lphone").value.trim();
-const password=document.getElementById("lpass").value;
+  const phone =
+    document.getElementById("lphone").value.trim();
 
-if(!phone || !password){
+  const password =
+    document.getElementById("lpw").value;
 
-showMsg(
-"lmsg",
-"Please enter mobile and password."
-);
+  const msg =
+    document.getElementById("lmsg");
 
-return;
-}
+  msg.textContent = "Please wait...";
 
-showMsg("lmsg","Logging in...");
+  try{
 
-try{
+    const result = await api("login",{
+      phone:phone,
+      password:password
+    });
 
-const result=await api(
-"login",
-{
-phone,
-password
-}
-);
+    msg.textContent = result.message || "";
 
-showMsg(
-"lmsg",
-result.message || "Login complete."
-);
+    if(result.ok){
 
-if(result.ok){
+      localStorage.setItem(
+        "sas_user",
+        JSON.stringify({
+          name:result.name,
+          phone:result.phone,
+          loginCount:result.loginCount
+        })
+      );
 
-localStorage.setItem(
-"sas_user",
-JSON.stringify(result)
-);
+      msg.textContent =
+        "Login successful. Welcome " +
+        result.name;
 
-setTimeout(
-()=>{
-closeModal("login");
-},
-1000
-);
+      setTimeout(function(){
+        closeModal("loginModal");
+      },1200);
 
-}
+    }
 
-}catch(error){
+  }catch(error){
 
-showMsg(
-"lmsg",
-"Connection error. Please try again."
-);
+    msg.textContent =
+      "Connection error. Please try again.";
 
-}
+    console.error(error);
+
+  }
 
 }
 
 
-/* REQUIREMENT */
+/* =================================================
+   REQUIREMENT SUBMIT
+   ================================================= */
 
 async function submitRequirement(){
 
-const name=document.getElementById("qname").value.trim();
-const phone=document.getElementById("qphone").value.trim();
-const service=document.getElementById("qservice").value;
-const requirement=document.getElementById("qrequirement").value.trim();
-const email=document.getElementById("qemail").value.trim();
+  const name =
+    document.getElementById("qname").value.trim();
 
+  const phone =
+    document.getElementById("qphone").value.trim();
 
-if(!name || !phone || !service || !requirement){
+  const service =
+    document.getElementById("qservice").value.trim();
 
-showMsg(
-"qmsg",
-"Please fill Name, Mobile, Service and Requirement."
-);
+  const requirement =
+    document.getElementById("qtext").value.trim();
 
-return;
-}
+  const msg =
+    document.getElementById("qmsg");
 
-showMsg(
-"qmsg",
-"Submitting..."
-);
+  msg.textContent = "Submitting...";
 
-try{
+  try{
 
-const result=await api(
-"requirement",
-{
-name,
-phone,
-service,
-requirement,
-email
-}
-);
+    const result = await api("requirement",{
+      name:name,
+      phone:phone,
+      service:service,
+      requirement:requirement
+    });
 
-showMsg(
-"qmsg",
-result.message || "Requirement submitted."
-);
+    msg.textContent =
+      result.message || "";
 
-if(result.ok){
+    if(result.ok){
 
-document.getElementById("qname").value="";
-document.getElementById("qphone").value="";
-document.getElementById("qservice").value="";
-document.getElementById("qrequirement").value="";
-document.getElementById("qemail").value="";
+      document.getElementById("qname").value="";
+      document.getElementById("qphone").value="";
+      document.getElementById("qservice").value="";
+      document.getElementById("qtext").value="";
 
-}
+    }
 
-}catch(error){
+  }catch(error){
 
-showMsg(
-"qmsg",
-"Connection error. Please try again."
-);
+    msg.textContent =
+      "Connection error. Please try again.";
 
-}
+    console.error(error);
+
+  }
 
 }
 
 
-/* ADMIN */
+/* =================================================
+   ADMIN PANEL
+   ================================================= */
 
 async function loadUsers(){
 
-const pin=document.getElementById("apin").value.trim();
+  const pin =
+    document.getElementById("apin").value.trim();
 
-if(!pin){
+  const msg =
+    document.getElementById("amsg");
 
-showMsg(
-"amsg",
-"Please enter Admin PIN."
-);
+  const content =
+    document.getElementById("adminContent");
 
-return;
-}
+  msg.textContent = "Loading...";
+  content.classList.add("hidden");
 
-showMsg(
-"amsg",
-"Loading..."
-);
+  try{
 
-try{
+    const result = await api("admin",{
+      pin:pin
+    });
 
-const result=await api(
-"admin",
-{
-pin
-}
-);
+    if(!result.ok){
 
-if(!result.ok){
+      msg.textContent =
+        result.message || "Access denied.";
 
-showMsg(
-"amsg",
-result.message || "Invalid Admin PIN."
-);
+      return;
+    }
 
-return;
-}
+    msg.textContent =
+      "Admin panel loaded.";
 
-showMsg(
-"amsg",
-"Data loaded successfully."
-);
+    content.classList.remove("hidden");
 
 
-/* USERS */
+    /* ============================================
+       USERS TABLE
+       ============================================ */
 
-const tbody=document.getElementById("tbody");
+    const tbody =
+      document.getElementById("tbody");
 
-tbody.innerHTML="";
+    tbody.innerHTML = "";
 
-(result.users || []).forEach(user=>{
+    (result.users || []).forEach(function(user){
 
-const tr=document.createElement("tr");
+      const tr =
+        document.createElement("tr");
 
-const phone=String(user.phone).replace(/\D/g,"");
+      const wa =
+        "https://wa.me/91" +
+        encodeURIComponent(user.phone);
 
-const wa="https://wa.me/91"+phone;
+      const call =
+        "tel:+91" + user.phone;
 
-tr.innerHTML=
+      tr.innerHTML = `
 
-"<td>"+escapeHtml(user.name)+"</td>"+
+        <td>${esc(user.name)}</td>
 
-"<td>"+escapeHtml(user.phone)+"</td>"+
+        <td>${esc(user.phone)}</td>
 
-"<td>"+escapeHtml(user.registered)+"</td>"+
+        <td>${esc(user.registered)}</td>
 
-"<td>"+escapeHtml(user.lastLogin)+"</td>"+
+        <td>${esc(user.lastLogin || "-")}</td>
 
-"<td>"+escapeHtml(user.logins)+"</td>"+
+        <td>${esc(String(user.logins))}</td>
 
-"<td>"+
-"<a class='btn' target='_blank' href='"+wa+"'>WhatsApp</a> "+
-"<a class='btn secondary' href='tel:+91"+phone+"'>Call</a>"+
-"</td>";
+        <td>
+          <a class="btn whatsapp"
+             href="${wa}"
+             target="_blank">
+             WhatsApp
+          </a>
 
-tbody.appendChild(tr);
+          <a class="btn call"
+             href="${call}">
+             Call
+          </a>
+        </td>
 
-});
+      `;
 
+      tbody.appendChild(tr);
 
-/* REQUIREMENTS */
-
-const reqbody=document.getElementById("reqbody");
-
-reqbody.innerHTML="";
-
-(result.requirements || []).forEach(req=>{
-
-const tr=document.createElement("tr");
-
-const phone=String(req.phone).replace(/\D/g,"");
-
-const wa="https://wa.me/91"+phone;
-
-tr.innerHTML=
-
-"<td>"+escapeHtml(req.name)+"</td>"+
-
-"<td>"+escapeHtml(req.phone)+"</td>"+
-
-"<td>"+escapeHtml(req.service)+"</td>"+
-
-"<td style='white-space:normal;min-width:250px'>"+
-escapeHtml(req.requirement)+
-"</td>"+
-
-"<td>"+escapeHtml(req.submitted)+"</td>"+
-
-"<td>"+
-"<a class='btn' target='_blank' href='"+wa+"'>WhatsApp</a> "+
-"<a class='btn secondary' href='tel:+91"+phone+"'>Call</a>"+
-"</td>";
-
-reqbody.appendChild(tr);
-
-});
-
-}catch(error){
-
-showMsg(
-"amsg",
-"Connection error. Please try again."
-);
-
-}
-
-}
+    });
 
 
-function escapeHtml(value){
+    /* ============================================
+       REQUIREMENTS TABLE
+       ============================================ */
 
-return String(value ?? "")
-.replace(/&/g,"&amp;")
-.replace(/</g,"&lt;")
-.replace(/>/g,"&gt;")
-.replace(/"/g,"&quot;")
-.replace(/'/g,"&#039;");
+    const qtbody =
+      document.getElementById("qtbody");
 
-}
+    qtbody.innerHTML = "";
 
+    (result.requirements || []).forEach(function(item){
 
-document.querySelectorAll(".modal").forEach(modal=>{
+      const tr =
+        document.createElement("tr");
 
-modal.addEventListener(
-"click",
-e=>{
+      const wa =
+        "https://wa.me/91" +
+        encodeURIComponent(item.phone);
 
-if(e.target===modal){
+      const call =
+        "tel:+91" + item.phone;
 
-modal.classList.remove("show");
+      tr.innerHTML = `
 
-}
+        <td>${esc(item.name)}</td>
+
+        <td>${esc(item.phone)}</td>
+
+        <td>${esc(item.service)}</td>
+
+        <td>${esc(item.requirement)}</td>
+
+        <td>${esc(item.email || "-")}</td>
+
+        <td>${esc(item.submitted)}</td>
+
+        <td>
+          <a class="btn whatsapp"
+             href="${wa}"
+             target="_blank">
+             WhatsApp
+          </a>
+
+          <a class="btn call"
+             href="${call}">
+             Call
+          </a>
+        </td>
+
+      `;
+
+      qtbody.appendChild(tr);
+
+    });
+
+  }catch(error){
+
+    msg.textContent =
+      "Connection error. Please check Apps Script deployment.";
+
+    console.error(error);
+
+  }
 
 }
-);
 
-});
+
+/* =================================================
+   HTML ESCAPE
+   ================================================= */
+
+function esc(value){
+
+  return String(value == null ? "" : value)
+
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+
+/* =================================================
+   AUTO-FILL REQUIREMENT FOR LOGGED USER
+   ================================================= */
+
+(function(){
+
+  try{
+
+    const saved =
+      localStorage.getItem("sas_user");
+
+    if(!saved) return;
+
+    const user =
+      JSON.parse(saved);
+
+    if(user.name){
+
+      document.getElementById("qname").value =
+        user.name;
+
+    }
+
+    if(user.phone){
+
+      document.getElementById("qphone").value =
+        user.phone;
+
+    }
+
+  }catch(error){
+
+    console.error(error);
+
+  }
+
+})();
 
 </script>
 
 </body>
 </html>
-```
