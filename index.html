@@ -8,14 +8,21 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
+
 body{
   font-family:Arial,sans-serif;
   background:#07111f;
   color:#fff;
   min-height:100vh
 }
+
 button,input,select,textarea{font:inherit}
-.wrap{max-width:1100px;margin:auto;padding:24px}
+
+.wrap{
+  max-width:1100px;
+  margin:auto;
+  padding:24px
+}
 
 header{
   display:flex;
@@ -24,8 +31,15 @@ header{
   gap:15px;
   padding:12px 0 25px
 }
-.brand{font-size:22px;font-weight:800}
-.brand span{color:#63e6be}
+
+.brand{
+  font-size:22px;
+  font-weight:800
+}
+
+.brand span{
+  color:#63e6be
+}
 
 nav{
   display:flex;
@@ -43,12 +57,16 @@ button,.btn{
   background:#15803d;
   font-weight:700
 }
+
 .secondary{
   background:rgba(255,255,255,.1);
   border:1px solid rgba(255,255,255,.2)
 }
 
-.hero{padding:65px 0 45px}
+.hero{
+  padding:65px 0 45px
+}
+
 .badge{
   display:inline-block;
   padding:8px 13px;
@@ -57,13 +75,26 @@ button,.btn{
   background:#ffffff10;
   margin-bottom:18px
 }
+
 h1{
   font-size:clamp(42px,7vw,78px);
   line-height:1.02;
   margin-bottom:18px
 }
-h2{font-size:34px;margin-bottom:15px}
-.highlight{color:#63e6be}
+
+h2{
+  font-size:34px;
+  margin-bottom:15px
+}
+
+h3{
+  margin-bottom:8px
+}
+
+.highlight{
+  color:#63e6be
+}
+
 .lead{
   font-size:19px;
   line-height:1.6;
@@ -77,20 +108,26 @@ h2{font-size:34px;margin-bottom:15px}
   gap:16px;
   margin:28px 0
 }
+
 .card{
   padding:22px;
   border-radius:17px;
   background:#ffffff0d;
   border:1px solid #ffffff1c
 }
-.card h3{margin-bottom:8px}
+
 .card p{
   color:#cbd5e1;
   line-height:1.5
 }
 
-section{padding:55px 0}
-.section-title{margin-bottom:22px}
+section{
+  padding:55px 0
+}
+
+.section-title{
+  margin-bottom:22px
+}
 
 .form-card{
   max-width:700px;
@@ -117,10 +154,12 @@ input,select,textarea{
   color:#fff;
   outline:none
 }
+
 textarea{
   min-height:120px;
   resize:vertical
 }
+
 input:focus,select:focus,textarea:focus{
   border-color:#63e6be
 }
@@ -144,8 +183,13 @@ input:focus,select:focus,textarea:focus{
   margin-top:20px
 }
 
-.whatsapp{background:#16a34a}
-.call{background:#2563eb}
+.whatsapp{
+  background:#16a34a
+}
+
+.call{
+  background:#2563eb
+}
 
 .modal{
   position:fixed;
@@ -157,7 +201,10 @@ input:focus,select:focus,textarea:focus{
   padding:20px;
   z-index:50
 }
-.modal.show{display:flex}
+
+.modal.show{
+  display:flex
+}
 
 .box{
   background:#0d1b2a;
@@ -168,8 +215,14 @@ input:focus,select:focus,textarea:focus{
   max-height:90vh;
   overflow:auto
 }
-.box h2{margin-bottom:18px}
-.box input,.box select,.box textarea{
+
+.box h2{
+  margin-bottom:18px
+}
+
+.box input,
+.box select,
+.box textarea{
   width:100%;
   padding:13px;
   margin:7px 0;
@@ -178,11 +231,13 @@ input:focus,select:focus,textarea:focus{
   background:#07111f;
   color:#fff
 }
+
 .msg{
   min-height:24px;
   color:#fbbf24;
   margin:8px 0
 }
+
 .close{
   float:right;
   background:#ffffff15;
@@ -199,15 +254,18 @@ table{
   border-collapse:collapse;
   min-width:700px
 }
+
 th,td{
   padding:11px;
   border-bottom:1px solid #ffffff18;
   text-align:left;
   vertical-align:top
 }
+
 th{
   background:#ffffff0d
 }
+
 td{
   color:#dbeafe
 }
@@ -217,7 +275,9 @@ td{
   color:#94a3b8
 }
 
-.hidden{display:none!important}
+.hidden{
+  display:none!important
+}
 
 footer{
   border-top:1px solid #ffffff15;
@@ -227,19 +287,140 @@ footer{
   text-align:center
 }
 
+/* =========================
+   REVIEWS
+========================= */
+
+.review-summary{
+  display:flex;
+  flex-wrap:wrap;
+  gap:22px;
+  align-items:center;
+  margin-bottom:22px
+}
+
+.review-score{
+  font-size:42px;
+  font-weight:800
+}
+
+.stars{
+  color:#fbbf24;
+  letter-spacing:2px;
+  font-size:24px
+}
+
+.review-list{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+  margin-top:22px
+}
+
+.review-card{
+  padding:20px;
+  border-radius:17px;
+  background:#ffffff0d;
+  border:1px solid #ffffff1c
+}
+
+.review-card h3{
+  margin-bottom:6px
+}
+
+.review-card p{
+  color:#cbd5e1;
+  line-height:1.55;
+  white-space:pre-wrap
+}
+
+.review-date{
+  margin-top:10px;
+  color:#94a3b8;
+  font-size:13px
+}
+
+.star-picker{
+  display:flex;
+  gap:4px;
+  margin:4px 0 8px
+}
+
+.star-picker button{
+  background:transparent;
+  color:#64748b;
+  border:0;
+  padding:2px;
+  font-size:30px;
+  line-height:1;
+  cursor:pointer
+}
+
+.star-picker button.active{
+  color:#fbbf24
+}
+
+.review-note{
+  color:#94a3b8;
+  font-size:13px;
+  line-height:1.5
+}
+
+.status-pending{
+  color:#fbbf24
+}
+
+.status-approved{
+  color:#63e6be
+}
+
 @media(max-width:800px){
-  .cards{grid-template-columns:1fr}
-  header{align-items:flex-start;flex-direction:column}
-  nav{width:100%}
-  nav button{flex:1}
-  .hero{padding-top:35px}
+
+  .cards{
+    grid-template-columns:1fr
+  }
+
+  .review-list{
+    grid-template-columns:1fr
+  }
+
+  header{
+    align-items:flex-start;
+    flex-direction:column
+  }
+
+  nav{
+    width:100%
+  }
+
+  nav button{
+    flex:1
+  }
+
+  .hero{
+    padding-top:35px
+  }
 }
 
 @media(max-width:500px){
-  .wrap{padding:17px}
-  h1{font-size:44px}
-  h2{font-size:28px}
-  .contact-box a,.contact-box button{width:100%;text-align:center}
+
+  .wrap{
+    padding:17px
+  }
+
+  h1{
+    font-size:44px
+  }
+
+  h2{
+    font-size:28px
+  }
+
+  .contact-box a,
+  .contact-box button{
+    width:100%;
+    text-align:center
+  }
 }
 </style>
 </head>
@@ -248,22 +429,44 @@ footer{
 
 <div class="wrap">
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
+
   <div class="brand">
     SACHIN <span>ACCOUNTING SOLUTION</span>
   </div>
 
   <nav>
-    <button class="secondary" onclick="openModal('loginModal')">Login</button>
-    <button onclick="openModal('registerModal')">Register</button>
-    <button class="secondary" onclick="openModal('adminModal')">Admin</button>
+    <button class="secondary"
+            onclick="openModal('loginModal')">
+      Login
+    </button>
+
+    <button onclick="openModal('registerModal')">
+      Register
+    </button>
+
+    <button class="secondary"
+            onclick="openModal('adminModal')">
+      Admin
+    </button>
   </nav>
+
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
-  <div class="badge">Jaipur • Accounting • GST • TDS • Tally</div>
+
+  <div class="badge">
+    Jaipur • Accounting • GST • TDS • Tally
+  </div>
 
   <h1>
     Smart Accounting<br>
@@ -271,12 +474,14 @@ footer{
   </h1>
 
   <p class="lead">
-    Professional accounting and business support services for individuals,
-    startups and businesses. Get help with GST, TDS, Tally Prime,
+    Professional accounting and business support services
+    for individuals, startups and businesses.
+    Get help with GST, TDS, Tally Prime,
     bookkeeping, Excel and accounting work.
   </p>
 
   <div class="contact-box">
+
     <a class="btn whatsapp"
        href="https://wa.me/917357891332"
        target="_blank">
@@ -293,129 +498,348 @@ footer{
        target="_blank">
        Instagram
     </a>
+
   </div>
+
 </section>
 
 
-<!-- SERVICES -->
+<!-- =========================
+     SERVICES
+========================= -->
+
 <section>
-  <h2 class="section-title">Our Services</h2>
+
+  <h2 class="section-title">
+    Our Services
+  </h2>
 
   <div class="cards">
 
     <div class="card">
       <h3>GST Services</h3>
       <p>
-        GST registration, return filing, reconciliation and
-        other GST-related accounting support.
+        GST registration, return filing,
+        reconciliation and other GST-related
+        accounting support.
       </p>
     </div>
 
     <div class="card">
       <h3>TDS Services</h3>
       <p>
-        TDS calculation, return filing and accounting assistance.
+        TDS calculation, return filing
+        and accounting assistance.
       </p>
     </div>
 
     <div class="card">
       <h3>Tally Prime</h3>
       <p>
-        Tally data entry, bookkeeping, ledger management and
-        accounting support.
+        Tally data entry, bookkeeping,
+        ledger management and accounting support.
       </p>
     </div>
 
     <div class="card">
       <h3>Bookkeeping</h3>
       <p>
-        Daily accounting, purchase, sales, expenses,
-        receipts and payment records.
+        Daily accounting, purchase, sales,
+        expenses, receipts and payment records.
       </p>
     </div>
 
     <div class="card">
       <h3>Excel Work</h3>
       <p>
-        Excel reports, data management, calculations,
-        formatting and accounting sheets.
+        Excel reports, data management,
+        calculations, formatting and accounting sheets.
       </p>
     </div>
 
     <div class="card">
       <h3>Accounting Support</h3>
       <p>
-        Complete accounting assistance according to
-        your business requirements.
+        Complete accounting assistance
+        according to your business requirements.
       </p>
     </div>
 
   </div>
+
 </section>
 
 
-<!-- REQUIREMENT -->
+<!-- =========================
+     REQUIREMENT
+========================= -->
+
 <section id="requirement">
-  <h2 class="section-title">Submit Your Requirement</h2>
+
+  <h2 class="section-title">
+    Submit Your Requirement
+  </h2>
 
   <div class="form-card">
 
     <p class="info">
-      Apni requirement submit karein. Hamari team aapse
-      jaldi contact karegi.
+      Apni requirement submit karein.
+      Hamari team aapse jaldi contact karegi.
     </p>
 
-    <label for="qname">Name *</label>
-    <input id="qname" type="text" placeholder="Enter your name">
+    <label for="qname">
+      Name *
+    </label>
 
-    <label for="qphone">Mobile Number *</label>
+    <input id="qname"
+           type="text"
+           placeholder="Enter your name">
+
+    <label for="qphone">
+      Mobile Number *
+    </label>
+
     <input id="qphone"
            type="tel"
            maxlength="10"
+           inputmode="numeric"
            placeholder="Enter 10 digit mobile number">
 
-    <label for="qservice">Service *</label>
+    <label for="qservice">
+      Service *
+    </label>
+
     <select id="qservice">
-      <option value="">Select Service</option>
-      <option>GST Services</option>
-      <option>TDS Services</option>
-      <option>Tally Prime</option>
-      <option>Bookkeeping</option>
-      <option>Excel Work</option>
-      <option>Accounting Support</option>
-      <option>Other</option>
+
+      <option value="">
+        Select Service
+      </option>
+
+      <option>
+        GST Services
+      </option>
+
+      <option>
+        TDS Services
+      </option>
+
+      <option>
+        Tally Prime
+      </option>
+
+      <option>
+        Bookkeeping
+      </option>
+
+      <option>
+        Excel Work
+      </option>
+
+      <option>
+        Accounting Support
+      </option>
+
+      <option>
+        Other
+      </option>
+
     </select>
 
-    <label for="qtext">Requirement *</label>
+    <label for="qtext">
+      Requirement *
+    </label>
+
     <textarea id="qtext"
               placeholder="Write your requirement"></textarea>
 
-    <button class="submit-btn" onclick="submitRequirement()">
+    <button class="submit-btn"
+            onclick="submitRequirement()">
       Submit Requirement
     </button>
 
-    <div id="qmsg" class="msg"></div>
+    <div id="qmsg"
+         class="msg">
+    </div>
 
   </div>
+
 </section>
 
 
-<!-- LOGIN MODAL -->
-<div id="loginModal" class="modal">
+<!-- =========================
+     REVIEWS
+========================= -->
+
+<section id="reviews">
+
+  <h2 class="section-title">
+    Customer Reviews
+  </h2>
+
+  <div class="review-summary">
+
+    <div>
+
+      <div id="reviewScore"
+           class="review-score">
+        0.0
+      </div>
+
+      <div id="reviewStars"
+           class="stars">
+        ★★★★★
+      </div>
+
+      <div id="reviewCount"
+           class="small">
+        No reviews yet
+      </div>
+
+    </div>
+
+
+    <!-- REVIEW FORM -->
+
+    <div class="form-card"
+         style="flex:1;min-width:min(100%,420px)">
+
+      <h3>
+        Apna Review Dijiye
+      </h3>
+
+      <p class="info">
+        Aapka experience hamare liye important hai.
+      </p>
+
+      <label>
+        Your Name *
+      </label>
+
+      <input id="reviewName"
+             type="text"
+             placeholder="Enter your name">
+
+      <label>
+        Mobile Number *
+      </label>
+
+      <input id="reviewPhone"
+             type="tel"
+             maxlength="10"
+             inputmode="numeric"
+             placeholder="Enter 10 digit mobile number">
+
+      <label>
+        Rating *
+      </label>
+
+      <div id="starPicker"
+           class="star-picker">
+
+        <button type="button"
+                data-star="1"
+                onclick="selectRating(1)">
+          ★
+        </button>
+
+        <button type="button"
+                data-star="2"
+                onclick="selectRating(2)">
+          ★
+        </button>
+
+        <button type="button"
+                data-star="3"
+                onclick="selectRating(3)">
+          ★
+        </button>
+
+        <button type="button"
+                data-star="4"
+                onclick="selectRating(4)">
+          ★
+        </button>
+
+        <button type="button"
+                data-star="5"
+                onclick="selectRating(5)">
+          ★
+        </button>
+
+      </div>
+
+      <div class="review-note">
+        1 se 5 stars select karein.
+      </div>
+
+      <label>
+        Your Review *
+      </label>
+
+      <textarea id="reviewText"
+                maxlength="1000"
+                placeholder="Apna experience likhiye..."></textarea>
+
+      <button class="submit-btn"
+              onclick="submitReview()">
+        Submit Review
+      </button>
+
+      <div id="reviewMsg"
+           class="msg">
+      </div>
+
+      <div class="review-note">
+        Review submit hone ke baad admin approval
+        ke baad website par show hoga.
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- PUBLIC REVIEWS -->
+
+  <div id="reviewList"
+       class="review-list">
+  </div>
+
+</section>
+
+
+<!-- =========================
+     LOGIN MODAL
+========================= -->
+
+<div id="loginModal"
+     class="modal">
 
   <div class="box">
 
-    <button class="close" onclick="closeModal('loginModal')">✕</button>
+    <button class="close"
+            onclick="closeModal('loginModal')">
+      ✕
+    </button>
 
-    <h2>Login</h2>
+    <h2>
+      Login
+    </h2>
 
-    <label>Mobile Number</label>
+    <label>
+      Mobile Number
+    </label>
+
     <input id="lphone"
            type="tel"
            maxlength="10"
+           inputmode="numeric"
            placeholder="10 digit mobile">
 
-    <label>Password</label>
+    <label>
+      Password
+    </label>
+
     <input id="lpw"
            type="password"
            placeholder="Password">
@@ -425,34 +849,55 @@ footer{
       Login
     </button>
 
-    <div id="lmsg" class="msg"></div>
+    <div id="lmsg"
+         class="msg">
+    </div>
 
   </div>
 
 </div>
 
 
-<!-- REGISTER MODAL -->
-<div id="registerModal" class="modal">
+<!-- =========================
+     REGISTER MODAL
+========================= -->
+
+<div id="registerModal"
+     class="modal">
 
   <div class="box">
 
-    <button class="close" onclick="closeModal('registerModal')">✕</button>
+    <button class="close"
+            onclick="closeModal('registerModal')">
+      ✕
+    </button>
 
-    <h2>Create Account</h2>
+    <h2>
+      Create Account
+    </h2>
 
-    <label>Name</label>
+    <label>
+      Name
+    </label>
+
     <input id="rname"
            type="text"
            placeholder="Your full name">
 
-    <label>Mobile Number</label>
+    <label>
+      Mobile Number
+    </label>
+
     <input id="rphone"
            type="tel"
            maxlength="10"
+           inputmode="numeric"
            placeholder="10 digit mobile">
 
-    <label>Password</label>
+    <label>
+      Password
+    </label>
+
     <input id="rpw"
            type="password"
            placeholder="Minimum 6 characters">
@@ -462,23 +907,37 @@ footer{
       Register
     </button>
 
-    <div id="rmsg" class="msg"></div>
+    <div id="rmsg"
+         class="msg">
+    </div>
 
   </div>
 
 </div>
 
 
-<!-- ADMIN MODAL -->
-<div id="adminModal" class="modal">
+<!-- =========================
+     ADMIN MODAL
+========================= -->
 
-  <div class="box" style="width:min(1000px,100%)">
+<div id="adminModal"
+     class="modal">
 
-    <button class="close" onclick="closeModal('adminModal')">✕</button>
+  <div class="box"
+       style="width:min(1100px,100%)">
 
-    <h2>Admin Panel</h2>
+    <button class="close"
+            onclick="closeModal('adminModal')">
+      ✕
+    </button>
 
-    <label>Admin PIN</label>
+    <h2>
+      Admin Panel
+    </h2>
+
+    <label>
+      Admin PIN
+    </label>
 
     <input id="apin"
            type="password"
@@ -489,9 +948,16 @@ footer{
       Open Admin Panel
     </button>
 
-    <div id="amsg" class="msg"></div>
+    <div id="amsg"
+         class="msg">
+    </div>
 
-    <div id="adminContent" class="hidden">
+
+    <div id="adminContent"
+         class="hidden">
+
+
+      <!-- USERS -->
 
       <h3 style="margin-top:25px;margin-bottom:10px">
         Registered Users
@@ -500,22 +966,31 @@ footer{
       <div class="admin-wrap">
 
         <table>
+
           <thead>
+
             <tr>
+
               <th>Name</th>
               <th>Mobile</th>
               <th>Registered</th>
               <th>Last Login</th>
               <th>Login Count</th>
               <th>Contact</th>
+
             </tr>
+
           </thead>
 
-          <tbody id="tbody"></tbody>
+          <tbody id="tbody">
+          </tbody>
+
         </table>
 
       </div>
 
+
+      <!-- REQUIREMENTS -->
 
       <h3 style="margin-top:30px;margin-bottom:10px">
         Customer Requirements
@@ -524,8 +999,11 @@ footer{
       <div class="admin-wrap">
 
         <table>
+
           <thead>
+
             <tr>
+
               <th>Name</th>
               <th>Mobile</th>
               <th>Service</th>
@@ -533,13 +1011,56 @@ footer{
               <th>Email</th>
               <th>Submitted</th>
               <th>Contact</th>
+
             </tr>
+
           </thead>
 
-          <tbody id="qtbody"></tbody>
+          <tbody id="qtbody">
+          </tbody>
+
         </table>
 
       </div>
+
+
+      <!-- REVIEWS ADMIN -->
+
+      <h3 style="margin-top:30px;margin-bottom:10px">
+        Customer Reviews
+      </h3>
+
+      <div class="admin-wrap">
+
+        <table>
+
+          <thead>
+
+            <tr>
+
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>Rating</th>
+              <th>Review</th>
+              <th>Status</th>
+              <th>Submitted</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody id="rtbody">
+          </tbody>
+
+        </table>
+
+      </div>
+
+      <p class="review-note"
+         style="margin-top:12px">
+        Review approval/change Google Sheet ke Reviews tab
+        me Status column se karein: Pending / Approved.
+      </p>
 
     </div>
 
@@ -547,6 +1068,10 @@ footer{
 
 </div>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
   © 2026 Sachin Accounting Solution • Jaipur
@@ -559,7 +1084,7 @@ footer{
 
 /* =================================================
    GOOGLE APPS SCRIPT API
-   ================================================= */
+================================================= */
 
 const API_URL =
 "https://script.google.com/macros/s/AKfycbwyLG9lDvhD9PSHapn0jyKArLk31Mz6_7xVVFhmG0tM6r54g4cgt5P3HOQuMqPbeSwv/exec";
@@ -567,25 +1092,39 @@ const API_URL =
 
 /* =================================================
    MODAL
-   ================================================= */
+================================================= */
 
 function openModal(id){
-  document.getElementById(id).classList.add("show");
+
+  document
+    .getElementById(id)
+    .classList
+    .add("show");
+
 }
 
 function closeModal(id){
-  document.getElementById(id).classList.remove("show");
+
+  document
+    .getElementById(id)
+    .classList
+    .remove("show");
+
 }
 
 
-/* Close modal when clicking outside */
+/* Close modal outside */
 
-document.querySelectorAll(".modal").forEach(function(modal){
+document
+.querySelectorAll(".modal")
+.forEach(function(modal){
 
   modal.addEventListener("click",function(e){
 
     if(e.target === modal){
+
       modal.classList.remove("show");
+
     }
 
   });
@@ -595,67 +1134,109 @@ document.querySelectorAll(".modal").forEach(function(modal){
 
 /* =================================================
    API HELPER
-   ================================================= */
+================================================= */
 
 async function api(action,data={}){
 
-  const params = new URLSearchParams();
+  const params =
+    new URLSearchParams();
 
-  params.append("action",action);
+  params.append(
+    "action",
+    action
+  );
 
-  Object.keys(data).forEach(function(key){
-    params.append(key,data[key]);
+  Object.keys(data)
+  .forEach(function(key){
+
+    params.append(
+      key,
+      data[key]
+    );
+
   });
 
-  const url = API_URL + "?" + params.toString();
+  const url =
+    API_URL +
+    "?" +
+    params.toString();
 
-  const response = await fetch(url,{
-    method:"GET"
-  });
+  const response =
+    await fetch(
+      url,
+      {
+        method:"GET"
+      }
+    );
 
   return await response.json();
+
 }
 
 
 /* =================================================
    REGISTER
-   ================================================= */
+================================================= */
 
 async function registerUser(){
 
   const name =
-    document.getElementById("rname").value.trim();
+    document
+    .getElementById("rname")
+    .value
+    .trim();
 
   const phone =
-    document.getElementById("rphone").value.trim();
+    document
+    .getElementById("rphone")
+    .value
+    .trim();
 
   const password =
-    document.getElementById("rpw").value;
+    document
+    .getElementById("rpw")
+    .value;
 
   const msg =
-    document.getElementById("rmsg");
+    document
+    .getElementById("rmsg");
 
-  msg.textContent = "Please wait...";
+  msg.textContent =
+    "Please wait...";
 
   try{
 
-    const result = await api("register",{
-      name:name,
-      phone:phone,
-      password:password
-    });
+    const result =
+      await api(
+        "register",
+        {
+          name:name,
+          phone:phone,
+          password:password
+        }
+      );
 
-    msg.textContent = result.message || "";
+    msg.textContent =
+      result.message || "";
 
     if(result.ok){
 
-      document.getElementById("rname").value="";
-      document.getElementById("rphone").value="";
-      document.getElementById("rpw").value="";
+      document
+      .getElementById("rname")
+      .value="";
+
+      document
+      .getElementById("rphone")
+      .value="";
+
+      document
+      .getElementById("rpw")
+      .value="";
 
       setTimeout(function(){
 
         closeModal("registerModal");
+
         openModal("loginModal");
 
       },1000);
@@ -676,29 +1257,41 @@ async function registerUser(){
 
 /* =================================================
    LOGIN
-   ================================================= */
+================================================= */
 
 async function loginUser(){
 
   const phone =
-    document.getElementById("lphone").value.trim();
+    document
+    .getElementById("lphone")
+    .value
+    .trim();
 
   const password =
-    document.getElementById("lpw").value;
+    document
+    .getElementById("lpw")
+    .value;
 
   const msg =
-    document.getElementById("lmsg");
+    document
+    .getElementById("lmsg");
 
-  msg.textContent = "Please wait...";
+  msg.textContent =
+    "Please wait...";
 
   try{
 
-    const result = await api("login",{
-      phone:phone,
-      password:password
-    });
+    const result =
+      await api(
+        "login",
+        {
+          phone:phone,
+          password:password
+        }
+      );
 
-    msg.textContent = result.message || "";
+    msg.textContent =
+      result.message || "";
 
     if(result.ok){
 
@@ -715,9 +1308,15 @@ async function loginUser(){
         "Login successful. Welcome " +
         result.name;
 
+      /* Auto fill */
+
       setTimeout(function(){
+
+        fillUserDetails();
+
         closeModal("loginModal");
-      },1200);
+
+      },1000);
 
     }
 
@@ -734,46 +1333,111 @@ async function loginUser(){
 
 
 /* =================================================
-   REQUIREMENT SUBMIT
-   ================================================= */
+   REQUIREMENT
+================================================= */
 
 async function submitRequirement(){
 
   const name =
-    document.getElementById("qname").value.trim();
+    document
+    .getElementById("qname")
+    .value
+    .trim();
 
   const phone =
-    document.getElementById("qphone").value.trim();
+    document
+    .getElementById("qphone")
+    .value
+    .trim();
 
   const service =
-    document.getElementById("qservice").value.trim();
+    document
+    .getElementById("qservice")
+    .value
+    .trim();
 
   const requirement =
-    document.getElementById("qtext").value.trim();
+    document
+    .getElementById("qtext")
+    .value
+    .trim();
 
   const msg =
-    document.getElementById("qmsg");
+    document
+    .getElementById("qmsg");
 
-  msg.textContent = "Submitting...";
+  if(!name){
+
+    msg.textContent =
+      "Please enter your name.";
+
+    return;
+
+  }
+
+  if(!/^\d{10}$/.test(phone)){
+
+    msg.textContent =
+      "Please enter a valid 10 digit mobile number.";
+
+    return;
+
+  }
+
+  if(!service){
+
+    msg.textContent =
+      "Please select a service.";
+
+    return;
+
+  }
+
+  if(!requirement){
+
+    msg.textContent =
+      "Please write your requirement.";
+
+    return;
+
+  }
+
+  msg.textContent =
+    "Submitting...";
 
   try{
 
-    const result = await api("requirement",{
-      name:name,
-      phone:phone,
-      service:service,
-      requirement:requirement
-    });
+    const result =
+      await api(
+        "requirement",
+        {
+          name:name,
+          phone:phone,
+          service:service,
+          requirement:requirement
+        }
+      );
 
     msg.textContent =
       result.message || "";
 
     if(result.ok){
 
-      document.getElementById("qname").value="";
-      document.getElementById("qphone").value="";
-      document.getElementById("qservice").value="";
-      document.getElementById("qtext").value="";
+      document
+      .getElementById("qname")
+      .value="";
+
+      document
+      .getElementById("qphone")
+      .value="";
+
+      document
+      .getElementById("qservice")
+      .value="";
+
+      document
+      .getElementById("qtext")
+      .value="";
 
     }
 
@@ -783,6 +1447,321 @@ async function submitRequirement(){
       "Connection error. Please try again.";
 
     console.error(error);
+
+  }
+
+}
+
+
+/* =================================================
+   REVIEW RATING
+================================================= */
+
+let selectedRating = 0;
+
+function selectRating(rating){
+
+  selectedRating =
+    Number(rating);
+
+  document
+  .querySelectorAll(
+    "#starPicker button"
+  )
+  .forEach(function(btn){
+
+    const star =
+      Number(
+        btn.getAttribute("data-star")
+      );
+
+    btn.classList.toggle(
+      "active",
+      star <= selectedRating
+    );
+
+  });
+
+}
+
+
+/* =================================================
+   SUBMIT REVIEW
+================================================= */
+
+async function submitReview(){
+
+  const name =
+    document
+    .getElementById("reviewName")
+    .value
+    .trim();
+
+  const phone =
+    document
+    .getElementById("reviewPhone")
+    .value
+    .trim();
+
+  const review =
+    document
+    .getElementById("reviewText")
+    .value
+    .trim();
+
+  const msg =
+    document
+    .getElementById("reviewMsg");
+
+
+  if(!name){
+
+    msg.textContent =
+      "Please enter your name.";
+
+    return;
+
+  }
+
+
+  if(!/^\d{10}$/.test(phone)){
+
+    msg.textContent =
+      "Please enter a valid 10 digit mobile number.";
+
+    return;
+
+  }
+
+
+  if(
+    selectedRating < 1 ||
+    selectedRating > 5
+  ){
+
+    msg.textContent =
+      "Please select a rating.";
+
+    return;
+
+  }
+
+
+  if(!review){
+
+    msg.textContent =
+      "Please write your review.";
+
+    return;
+
+  }
+
+
+  if(review.length > 1000){
+
+    msg.textContent =
+      "Review maximum 1000 characters ka ho sakta hai.";
+
+    return;
+
+  }
+
+
+  msg.textContent =
+    "Submitting...";
+
+
+  try{
+
+    const result =
+      await api(
+        "review",
+        {
+          name:name,
+          phone:phone,
+          rating:selectedRating,
+          review:review
+        }
+      );
+
+
+    msg.textContent =
+      result.message || "";
+
+
+    if(result.ok){
+
+      document
+      .getElementById("reviewName")
+      .value="";
+
+      document
+      .getElementById("reviewPhone")
+      .value="";
+
+      document
+      .getElementById("reviewText")
+      .value="";
+
+      selectRating(0);
+
+      /*
+       * Pending review public list me nahi aayega.
+       * Admin sheet me save hoga.
+       */
+
+      setTimeout(function(){
+
+        loadReviews();
+
+      },500);
+
+    }
+
+  }catch(error){
+
+    msg.textContent =
+      "Connection error. Please try again.";
+
+    console.error(error);
+
+  }
+
+}
+
+
+/* =================================================
+   LOAD PUBLIC REVIEWS
+================================================= */
+
+async function loadReviews(){
+
+  try{
+
+    const result =
+      await api(
+        "reviews",
+        {}
+      );
+
+
+    if(!result.ok){
+
+      return;
+
+    }
+
+
+    const list =
+      document
+      .getElementById("reviewList");
+
+
+    const reviews =
+      result.reviews || [];
+
+
+    list.innerHTML =
+      "";
+
+
+    let total = 0;
+
+
+    reviews.forEach(function(item){
+
+      const rating =
+        Math.max(
+          0,
+          Math.min(
+            5,
+            Number(item.rating) || 0
+          )
+        );
+
+
+      total += rating;
+
+
+      const card =
+        document
+        .createElement("div");
+
+
+      card.className =
+        "review-card";
+
+
+      const stars =
+        "★★★★★"
+        .slice(0,rating);
+
+
+      card.innerHTML = `
+
+        <h3>
+          ${esc(item.name)}
+        </h3>
+
+        <div class="stars">
+          ${stars}
+        </div>
+
+        <p>
+          ${esc(item.review)}
+        </p>
+
+        <div class="review-date">
+          ${esc(item.submitted || "")}
+        </div>
+
+      `;
+
+
+      list.appendChild(card);
+
+    });
+
+
+    const count =
+      reviews.length;
+
+
+    const average =
+      count
+      ? (total / count).toFixed(1)
+      : "0.0";
+
+
+    document
+    .getElementById("reviewScore")
+    .textContent =
+      average;
+
+
+    document
+    .getElementById("reviewStars")
+    .textContent =
+      "★★★★★";
+
+
+    document
+    .getElementById("reviewCount")
+    .textContent =
+      count +
+      (
+        count === 1
+        ? " review"
+        : " reviews"
+      );
+
+
+  }catch(error){
+
+    console.error(
+      "Review loading error:",
+      error
+    );
 
   }
 
@@ -791,76 +1770,130 @@ async function submitRequirement(){
 
 /* =================================================
    ADMIN PANEL
-   ================================================= */
+================================================= */
 
 async function loadUsers(){
 
   const pin =
-    document.getElementById("apin").value.trim();
+    document
+    .getElementById("apin")
+    .value
+    .trim();
 
   const msg =
-    document.getElementById("amsg");
+    document
+    .getElementById("amsg");
 
   const content =
-    document.getElementById("adminContent");
+    document
+    .getElementById("adminContent");
 
-  msg.textContent = "Loading...";
-  content.classList.add("hidden");
+
+  if(!pin){
+
+    msg.textContent =
+      "Please enter admin PIN.";
+
+    return;
+
+  }
+
+
+  msg.textContent =
+    "Loading...";
+
+  content.classList.add(
+    "hidden"
+  );
+
 
   try{
 
-    const result = await api("admin",{
-      pin:pin
-    });
+    const result =
+      await api(
+        "admin",
+        {
+          pin:pin
+        }
+      );
+
 
     if(!result.ok){
 
       msg.textContent =
-        result.message || "Access denied.";
+        result.message ||
+        "Access denied.";
 
       return;
+
     }
+
 
     msg.textContent =
       "Admin panel loaded.";
 
-    content.classList.remove("hidden");
+    content.classList.remove(
+      "hidden"
+    );
 
 
-    /* ============================================
+    /* =========================
        USERS TABLE
-       ============================================ */
+    ========================= */
 
     const tbody =
-      document.getElementById("tbody");
+      document
+      .getElementById("tbody");
 
-    tbody.innerHTML = "";
 
-    (result.users || []).forEach(function(user){
+    tbody.innerHTML =
+      "";
+
+
+    (result.users || [])
+    .forEach(function(user){
 
       const tr =
-        document.createElement("tr");
+        document
+        .createElement("tr");
+
 
       const wa =
         "https://wa.me/91" +
-        encodeURIComponent(user.phone);
+        encodeURIComponent(
+          user.phone
+        );
+
 
       const call =
-        "tel:+91" + user.phone;
+        "tel:+91" +
+        user.phone;
+
 
       tr.innerHTML = `
 
-        <td>${esc(user.name)}</td>
-
-        <td>${esc(user.phone)}</td>
-
-        <td>${esc(user.registered)}</td>
-
-        <td>${esc(user.lastLogin || "-")}</td>
-
-        <td>${esc(String(user.logins))}</td>
+        <td>
+          ${esc(user.name)}
+        </td>
 
         <td>
+          ${esc(user.phone)}
+        </td>
+
+        <td>
+          ${esc(user.registered)}
+        </td>
+
+        <td>
+          ${esc(user.lastLogin || "-")}
+        </td>
+
+        <td>
+          ${esc(String(user.logins || 0))}
+        </td>
+
+        <td>
+
           <a class="btn whatsapp"
              href="${wa}"
              target="_blank">
@@ -871,51 +1904,78 @@ async function loadUsers(){
              href="${call}">
              Call
           </a>
+
         </td>
 
       `;
+
 
       tbody.appendChild(tr);
 
     });
 
 
-    /* ============================================
+    /* =========================
        REQUIREMENTS TABLE
-       ============================================ */
+    ========================= */
 
     const qtbody =
-      document.getElementById("qtbody");
+      document
+      .getElementById("qtbody");
 
-    qtbody.innerHTML = "";
 
-    (result.requirements || []).forEach(function(item){
+    qtbody.innerHTML =
+      "";
+
+
+    (result.requirements || [])
+    .forEach(function(item){
 
       const tr =
-        document.createElement("tr");
+        document
+        .createElement("tr");
+
 
       const wa =
         "https://wa.me/91" +
-        encodeURIComponent(item.phone);
+        encodeURIComponent(
+          item.phone
+        );
+
 
       const call =
-        "tel:+91" + item.phone;
+        "tel:+91" +
+        item.phone;
+
 
       tr.innerHTML = `
 
-        <td>${esc(item.name)}</td>
-
-        <td>${esc(item.phone)}</td>
-
-        <td>${esc(item.service)}</td>
-
-        <td>${esc(item.requirement)}</td>
-
-        <td>${esc(item.email || "-")}</td>
-
-        <td>${esc(item.submitted)}</td>
+        <td>
+          ${esc(item.name)}
+        </td>
 
         <td>
+          ${esc(item.phone)}
+        </td>
+
+        <td>
+          ${esc(item.service)}
+        </td>
+
+        <td>
+          ${esc(item.requirement)}
+        </td>
+
+        <td>
+          ${esc(item.email || "-")}
+        </td>
+
+        <td>
+          ${esc(item.submitted)}
+        </td>
+
+        <td>
+
           <a class="btn whatsapp"
              href="${wa}"
              target="_blank">
@@ -926,13 +1986,106 @@ async function loadUsers(){
              href="${call}">
              Call
           </a>
+
         </td>
 
       `;
 
+
       qtbody.appendChild(tr);
 
     });
+
+
+    /* =========================
+       REVIEWS TABLE
+    ========================= */
+
+    const rtbody =
+      document
+      .getElementById("rtbody");
+
+
+    rtbody.innerHTML =
+      "";
+
+
+    (result.reviews || [])
+    .forEach(function(item){
+
+      const tr =
+        document
+        .createElement("tr");
+
+
+      const status =
+        String(
+          item.status || "Pending"
+        );
+
+
+      const statusClass =
+        status.toLowerCase()
+        === "approved"
+        ? "status-approved"
+        : "status-pending";
+
+
+      tr.innerHTML = `
+
+        <td>
+          ${esc(item.name)}
+        </td>
+
+        <td>
+          ${esc(item.phone)}
+        </td>
+
+        <td>
+
+          <span class="stars"
+                style="font-size:18px">
+            ${"★★★★★".slice(
+              0,
+              Math.max(
+                0,
+                Math.min(
+                  5,
+                  Number(item.rating) || 0
+                )
+              )
+            )}
+          </span>
+
+          <br>
+
+          ${esc(String(item.rating || 0))}/5
+
+        </td>
+
+        <td>
+          ${esc(item.review)}
+        </td>
+
+        <td>
+
+          <strong class="${statusClass}">
+            ${esc(status)}
+          </strong>
+
+        </td>
+
+        <td>
+          ${esc(item.submitted || "")}
+        </td>
+
+      `;
+
+
+      rtbody.appendChild(tr);
+
+    });
+
 
   }catch(error){
 
@@ -948,58 +2101,150 @@ async function loadUsers(){
 
 /* =================================================
    HTML ESCAPE
-   ================================================= */
+================================================= */
 
 function esc(value){
 
-  return String(value == null ? "" : value)
+  return String(
+    value == null
+    ? ""
+    : value
+  )
 
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
+  .replace(
+    /&/g,
+    "&amp;"
+  )
+
+  .replace(
+    /</g,
+    "&lt;"
+  )
+
+  .replace(
+    />/g,
+    "&gt;"
+  )
+
+  .replace(
+    /"/g,
+    "&quot;"
+  )
+
+  .replace(
+    /'/g,
+    "&#039;"
+  );
 
 }
 
 
 /* =================================================
-   AUTO-FILL REQUIREMENT FOR LOGGED USER
-   ================================================= */
+   AUTO FILL USER DETAILS
+================================================= */
 
-(function(){
+function fillUserDetails(){
 
   try{
 
     const saved =
-      localStorage.getItem("sas_user");
+      localStorage.getItem(
+        "sas_user"
+      );
 
-    if(!saved) return;
+
+    if(!saved){
+
+      return;
+
+    }
+
 
     const user =
       JSON.parse(saved);
 
+
     if(user.name){
 
-      document.getElementById("qname").value =
-        user.name;
+      const qname =
+        document
+        .getElementById("qname");
+
+      if(qname){
+
+        qname.value =
+          user.name;
+
+      }
+
+
+      const reviewName =
+        document
+        .getElementById("reviewName");
+
+      if(reviewName){
+
+        reviewName.value =
+          user.name;
+
+      }
 
     }
 
+
     if(user.phone){
 
-      document.getElementById("qphone").value =
-        user.phone;
+      const qphone =
+        document
+        .getElementById("qphone");
+
+      if(qphone){
+
+        qphone.value =
+          user.phone;
+
+      }
+
+
+      const reviewPhone =
+        document
+        .getElementById("reviewPhone");
+
+      if(reviewPhone){
+
+        reviewPhone.value =
+          user.phone;
+
+      }
 
     }
 
   }catch(error){
 
-    console.error(error);
+    console.error(
+      "Autofill error:",
+      error
+    );
 
   }
 
-})();
+}
+
+
+/* =================================================
+   PAGE LOAD
+================================================= */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    fillUserDetails();
+
+    loadReviews();
+
+  }
+);
 
 </script>
 
