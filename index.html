@@ -1851,9 +1851,21 @@ async function api(action,data={}){
 
         });
 
+        // Cache-buster keeps Google Apps Script responses fresh.
+        params.append("_", Date.now().toString());
+
         const response=await fetch(
-            API_URL+"?"+params.toString()
+            API_URL+"?"+params.toString(),
+            {
+                method:"GET",
+                redirect:"follow",
+                cache:"no-store"
+            }
         );
+
+        if(!response.ok){
+            throw new Error("HTTP "+response.status);
+        }
 
         return await response.json();
 
