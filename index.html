@@ -6,8 +6,8 @@
 
 <title>Sachin Accounting Solution | Jaipur</title>
 
-<meta name="description" content="Sachin Accounting Solution Jaipur - Accounting, GST, TDS, ITR Filing, Tally, Excel and Accountant Job Services.">
-<meta name="keywords" content="accountant Jaipur, ITR filing Jaipur, GST consultant Jaipur, Tally accountant, accountant job Jaipur, Sachin Accounting Solution">
+<meta name="description"
+content="Sachin Accounting Solution Jaipur - Accounting, GST, TDS, ITR, Tally, Excel and Accountant Job Services.">
 
 <style>
 *{
@@ -24,20 +24,22 @@ body{
 
 header{
     background:#0b3d91;
-    color:white;
-    padding:15px 5%;
+    color:#fff;
+    padding:15px 4%;
     display:flex;
     align-items:center;
     justify-content:space-between;
+    gap:15px;
     position:sticky;
     top:0;
-    z-index:999;
-    box-shadow:0 2px 10px #0002;
+    z-index:1000;
+    box-shadow:0 2px 10px #0003;
 }
 
 .logo{
     font-size:22px;
     font-weight:bold;
+    white-space:nowrap;
 }
 
 .logo span{
@@ -46,23 +48,31 @@ header{
 
 nav{
     display:flex;
-    gap:8px;
+    gap:7px;
     flex-wrap:wrap;
     justify-content:center;
 }
 
-nav button{
-    background:transparent;
-    color:white;
-    border:1px solid #ffffff55;
-    padding:9px 13px;
+nav button,
+.btn{
+    border:0;
+    background:#0b3d91;
+    color:#fff;
+    padding:10px 15px;
     border-radius:7px;
     cursor:pointer;
+    font-weight:bold;
 }
 
-nav button:hover{
-    background:white;
-    color:#0b3d91;
+nav button{
+    background:transparent;
+    border:1px solid #ffffff55;
+}
+
+nav button:hover,
+.btn:hover{
+    background:#ffd700;
+    color:#111;
 }
 
 .container{
@@ -82,125 +92,60 @@ nav button:hover{
 }
 
 .hero{
-    background:linear-gradient(135deg,#0b3d91,#1261c9);
-    color:white;
-    padding:70px 20px;
-    border-radius:0 0 30px 30px;
     text-align:center;
+    padding:80px 15px;
 }
 
 .hero h1{
     font-size:42px;
+    color:#0b3d91;
     margin-bottom:15px;
 }
 
 .hero p{
-    font-size:19px;
-    line-height:1.7;
-    max-width:850px;
-    margin:auto;
-}
-
-.btn{
-    border:none;
-    padding:12px 20px;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:15px;
-    font-weight:bold;
-    margin:7px;
-}
-
-.btn-primary{
-    background:#0b3d91;
-    color:white;
-}
-
-.btn-yellow{
-    background:#ffd700;
-    color:#111;
-}
-
-.btn-green{
-    background:#159447;
-    color:white;
-}
-
-.btn-red{
-    background:#d93025;
-    color:white;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.section-title h2{
-    color:#0b3d91;
-    font-size:32px;
-    margin-bottom:10px;
-}
-
-.section-title p{
-    color:#666;
+    font-size:20px;
+    margin-bottom:25px;
 }
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
+    margin-top:30px;
 }
 
 .card{
-    background:white;
+    background:#fff;
     padding:25px;
-    border-radius:15px;
-    box-shadow:0 4px 18px #00000012;
-    transition:.2s;
-}
-
-.card:hover{
-    transform:translateY(-4px);
+    border-radius:12px;
+    box-shadow:0 3px 15px #0001;
 }
 
 .card h3{
     color:#0b3d91;
-    margin-bottom:12px;
+    margin-bottom:10px;
 }
 
-.card p{
-    color:#555;
-    line-height:1.6;
-}
-
-.icon{
-    font-size:40px;
-    margin-bottom:12px;
+h1,h2{
+    color:#0b3d91;
+    margin-bottom:20px;
 }
 
 .form-box{
-    background:white;
-    max-width:750px;
+    background:#fff;
+    max-width:650px;
     margin:auto;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 4px 20px #00000012;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 3px 15px #0002;
 }
 
-.form-group{
-    margin-bottom:16px;
-}
-
-.form-group label{
-    display:block;
-    font-weight:bold;
-    margin-bottom:7px;
-}
-
-input,select,textarea{
+input,
+select,
+textarea{
     width:100%;
     padding:12px;
+    margin:8px 0 15px;
     border:1px solid #ccc;
     border-radius:7px;
     font-size:15px;
@@ -211,96 +156,39 @@ textarea{
     resize:vertical;
 }
 
-.info{
-    background:#eef5ff;
-    border-left:5px solid #0b3d91;
-    padding:18px;
-    margin:20px 0;
-    border-radius:8px;
-    line-height:1.7;
+label{
+    font-weight:bold;
+}
+
+.message{
+    margin-top:15px;
+    padding:10px;
+    border-radius:6px;
+    display:none;
 }
 
 .success{
-    background:#e7f7ed;
-    color:#126b35;
-    padding:12px;
-    border-radius:7px;
-    margin-top:10px;
-    display:none;
+    background:#dff5e5;
+    color:#08752b;
 }
 
 .error{
-    background:#fdecec;
-    color:#a40000;
-    padding:12px;
-    border-radius:7px;
-    margin-top:10px;
-    display:none;
+    background:#ffe1e1;
+    color:#b00000;
 }
 
-.price{
-    font-size:25px;
-    font-weight:bold;
-    color:#0b3d91;
-}
-
-.steps{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
-    margin-top:25px;
-}
-
-.step{
-    background:white;
+.review-card{
+    background:#fff;
     padding:20px;
-    border-radius:12px;
-    box-shadow:0 3px 15px #0001;
-    text-align:center;
-}
-
-.step-number{
-    width:45px;
-    height:45px;
-    line-height:45px;
-    margin:0 auto 12px;
-    border-radius:50%;
-    background:#0b3d91;
-    color:white;
-    font-weight:bold;
-    font-size:20px;
-}
-
-.review{
-    background:white;
-    padding:20px;
-    margin-bottom:15px;
-    border-radius:12px;
-    box-shadow:0 3px 12px #0001;
+    margin:15px 0;
+    border-radius:10px;
+    box-shadow:0 2px 10px #0001;
 }
 
 .stars{
     color:#f5b400;
-    font-size:22px;
-}
-
-footer{
-    background:#082d69;
-    color:white;
-    padding:35px 20px;
-    text-align:center;
-}
-
-.footer-links{
-    margin:15px 0;
-}
-
-.footer-links button{
-    background:none;
-    border:none;
-    color:white;
-    margin:5px;
-    cursor:pointer;
+    font-size:20px;
+    margin:7px 0;
 }
 
 .modal{
@@ -312,68 +200,78 @@ footer{
     width:100%;
     height:100%;
     background:#0008;
+    padding:40px 15px;
     overflow:auto;
 }
 
 .modal-content{
-    background:white;
-    width:92%;
-    max-width:500px;
-    margin:70px auto;
+    background:#fff;
+    max-width:450px;
+    margin:50px auto;
     padding:30px;
-    border-radius:15px;
+    border-radius:12px;
     position:relative;
 }
 
 .close{
     position:absolute;
     right:18px;
-    top:12px;
-    font-size:28px;
+    top:10px;
+    font-size:30px;
     cursor:pointer;
 }
 
-.user-box{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 4px 18px #0001;
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+}
+
+th,td{
+    border:1px solid #ddd;
+    padding:9px;
+    text-align:left;
+}
+
+th{
+    background:#0b3d91;
+    color:#fff;
+}
+
+.table-box{
+    overflow-x:auto;
+    margin-top:15px;
+}
+
+.admin-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
     margin-bottom:20px;
 }
 
-.dashboard-nav{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-bottom:25px;
-}
-
-.dashboard-nav button{
-    padding:10px 15px;
-    border:none;
-    background:#e8eef8;
-    border-radius:7px;
-    cursor:pointer;
-}
-
-.dashboard-nav button.active{
+footer{
     background:#0b3d91;
-    color:white;
+    color:#fff;
+    text-align:center;
+    padding:25px 10px;
 }
 
-.dashboard-panel{
-    display:none;
-}
-
-.dashboard-panel.active{
-    display:block;
+.whatsapp{
+    display:inline-block;
+    background:#25d366;
+    color:#fff;
+    padding:12px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin-top:10px;
 }
 
 @media(max-width:700px){
 
     header{
         flex-direction:column;
-        gap:12px;
     }
 
     nav{
@@ -382,7 +280,7 @@ footer{
 
     nav button{
         font-size:12px;
-        padding:7px 9px;
+        padding:8px 9px;
     }
 
     .hero h1{
@@ -390,11 +288,7 @@ footer{
     }
 
     .hero p{
-        font-size:16px;
-    }
-
-    .page{
-        padding:30px 0;
+        font-size:17px;
     }
 }
 </style>
@@ -402,21 +296,50 @@ footer{
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
 
 <div class="logo">
-Sachin <span>Accounting Solution</span>
+    Sachin <span>Accounting Solution</span>
 </div>
 
 <nav>
+
 <button onclick="showPage('home')">Home</button>
-<button onclick="showPage('accounting')">Accounting</button>
-<button onclick="showPage('itr')">ITR Services</button>
-<button onclick="showPage('jobs')">Accountant Jobs</button>
-<button onclick="showPage('requirement')">Requirement</button>
-<button onclick="showPage('reviews')">Reviews</button>
-<button onclick="openModal('loginModal')">Login</button>
-<button onclick="openModal('registerModal')">Register</button>
+
+<button onclick="showPage('accounting')">
+    Accounting Services
+</button>
+
+<button onclick="showPage('itr')">
+    ITR Services
+</button>
+
+<button onclick="showPage('jobs')">
+    Accountant Jobs
+</button>
+
+<button onclick="showPage('requirement')">
+    Requirement
+</button>
+
+<button onclick="showPage('reviews')">
+    Reviews
+</button>
+
+<button onclick="openModal('loginModal')">
+    Login
+</button>
+
+<button onclick="openModal('registerModal')">
+    Register
+</button>
+
+<button onclick="openModal('adminModal')">
+    Admin
+</button>
+
 </nav>
 
 </header>
@@ -428,82 +351,61 @@ Sachin <span>Accounting Solution</span>
 
 <div class="hero">
 
-<h1>Sachin Accounting Solution</h1>
+<h1>All Accounting Services</h1>
 
 <p>
-Professional Accounting, GST, TDS, ITR Filing, Tally, Excel
-और Accountant Job Services in Jaipur.
+    Accounting • GST • TDS • ITR • Tally • Excel
+    • Accountant Jobs
 </p>
 
-<br>
-
-<button class="btn btn-yellow" onclick="showPage('accounting')">
-Our Services
+<button class="btn"
+onclick="openModal('loginModal')">
+    Login
 </button>
 
-<button class="btn btn-green" onclick="showPage('requirement')">
-Submit Your Requirement
+<button class="btn"
+onclick="openModal('registerModal')">
+    Register
 </button>
 
 </div>
 
 <div class="container">
 
-<br><br>
-
-<div class="section-title">
-<h2>हमारी मुख्य Services</h2>
-<p>Accounting से लेकर ITR और Accountant Job तक सहायता</p>
-</div>
-
 <div class="cards">
 
 <div class="card">
-<div class="icon">📊</div>
 <h3>Accounting Services</h3>
 <p>
-Daily accounting, Tally Prime, Ledger, Bank Reconciliation,
-Purchase, Sales और Accounts Management.
+Complete accounting work, bookkeeping,
+ledger, reconciliation and financial records.
 </p>
-<button class="btn btn-primary" onclick="showPage('accounting')">
-View Services
-</button>
 </div>
 
 <div class="card">
-<div class="icon">🧾</div>
-<h3>ITR Filing</h3>
+<h3>GST Services</h3>
 <p>
-Individual, Business और अन्य eligible taxpayers के लिए
-ITR filing assistance.
+GST registration, returns, reconciliation,
+e-invoice and e-way bill related services.
 </p>
-<button class="btn btn-primary" onclick="showPage('itr')">
-ITR Service
-</button>
 </div>
 
 <div class="card">
-<div class="icon">👨‍💼</div>
-<h3>Accountant Job Service</h3>
+<h3>ITR Services</h3>
 <p>
-अगर किसी company या business को Accountant की जरूरत है,
-तो requirement submit करें.
+Income Tax Return filing and related
+accounting and tax support.
 </p>
-<button class="btn btn-primary" onclick="showPage('jobs')">
-Job Service
-</button>
 </div>
 
+<div class="card">
+<h3>Accountant Jobs</h3>
+<p>
+Companies requiring accountants can
+submit their job requirement.
+</p>
 </div>
 
-<br><br>
-
-<div class="info">
-<b>📍 Location:</b> Jaipur, Rajasthan
-<br>
-<b>📱 Contact:</b> +91 73578 91332
-<br>
-<b>💬 WhatsApp:</b> नीचे दिए WhatsApp button से direct contact करें.
 </div>
 
 </div>
@@ -517,83 +419,41 @@ Job Service
 
 <div class="container">
 
-<div class="section-title">
-
-<h2>📊 Accounting Services</h2>
-
-<p>
-Complete accounting और business accounts management services
-</p>
-
-</div>
+<h1>Accounting Services</h1>
 
 <div class="cards">
 
 <div class="card">
-<div class="icon">📒</div>
-<h3>Tally Prime</h3>
-<p>
-Tally Prime में Sales, Purchase, Receipt, Payment,
-Journal, Ledger और Stock Management.
-</p>
+<h3>Bookkeeping</h3>
+<p>Monthly and regular bookkeeping services.</p>
 </div>
 
 <div class="card">
-<div class="icon">🧮</div>
 <h3>GST Accounting</h3>
-<p>
-GST related accounting, sales-purchase records,
-ITC और return preparation assistance.
-</p>
+<p>GST sales, purchase and reconciliation work.</p>
 </div>
 
 <div class="card">
-<div class="icon">💼</div>
-<h3>Business Accounting</h3>
-<p>
-Daily accounting, ledger maintenance, outstanding
-और business reports.
-</p>
+<h3>Tally Prime</h3>
+<p>Tally Prime accounting and data management.</p>
 </div>
 
 <div class="card">
-<div class="icon">📑</div>
-<h3>TDS Work</h3>
-<p>
-TDS calculation, deduction records और return related
-accounting assistance.
-</p>
+<h3>Excel</h3>
+<p>Accounting reports, formulas and MIS reports.</p>
 </div>
 
 <div class="card">
-<div class="icon">📈</div>
-<h3>Excel Work</h3>
-<p>
-Advanced Excel reports, MIS, outstanding reports,
-stock reports और accounting sheets.
-</p>
+<h3>TDS</h3>
+<p>TDS calculation, accounting and return support.</p>
 </div>
 
 <div class="card">
-<div class="icon">🏦</div>
 <h3>Bank Reconciliation</h3>
-<p>
-Bank statement और books के बीच reconciliation
-और difference checking.
-</p>
+<p>Bank statement and ledger reconciliation.</p>
 </div>
 
 </div>
-
-<br>
-
-<div class="info">
-अगर आपको Accounting Service चाहिए तो नीचे Requirement submit करें.
-</div>
-
-<button class="btn btn-primary" onclick="showPage('requirement')">
-Submit Accounting Requirement
-</button>
 
 </div>
 
@@ -606,111 +466,24 @@ Submit Accounting Requirement
 
 <div class="container">
 
-<div class="section-title">
-
-<h2>🧾 ITR Filing Services</h2>
-
-<p>
-Income Tax Return Filing Assistance
-</p>
-
-</div>
+<h1>ITR Services</h1>
 
 <div class="cards">
 
 <div class="card">
-<div class="icon">👤</div>
-<h3>Individual ITR</h3>
-<p>
-Salary, business और अन्य eligible income वाले
-individual taxpayers के लिए ITR filing assistance.
-</p>
+<h3>ITR Filing</h3>
+<p>Income Tax Return filing assistance.</p>
 </div>
 
 <div class="card">
-<div class="icon">🏪</div>
 <h3>Business ITR</h3>
-<p>
-Proprietorship और business income वाले taxpayers के
-लिए ITR related assistance.
-</p>
+<p>Business and proprietor ITR support.</p>
 </div>
 
 <div class="card">
-<div class="icon">💰</div>
 <h3>Tax Calculation</h3>
-<p>
-Income और available information के आधार पर
-tax calculation assistance.
-</p>
+<p>Income and tax calculation assistance.</p>
 </div>
-
-<div class="card">
-<div class="icon">📋</div>
-<h3>ITR Related Work</h3>
-<p>
-ITR filing से संबंधित documents और information
-organize करने में assistance.
-</p>
-</div>
-
-</div>
-
-<br>
-
-<div class="info">
-
-<b>ITR के लिए सामान्यतः आवश्यक जानकारी:</b>
-
-<br><br>
-
-• PAN
-<br>
-• Aadhaar
-<br>
-• Bank details
-<br>
-• Income details
-<br>
-• TDS information
-<br>
-• Investment / deduction details, जहाँ लागू हों
-<br>
-• Previous ITR details, जहाँ आवश्यक हों
-
-</div>
-
-<div class="form-box">
-
-<h3 style="color:#0b3d91;margin-bottom:20px;">
-ITR Service के लिए Requirement भेजें
-</h3>
-
-<div class="form-group">
-<label>Name</label>
-<input id="itrName" type="text" placeholder="अपना नाम">
-</div>
-
-<div class="form-group">
-<label>Mobile Number</label>
-<input id="itrPhone" type="tel" placeholder="Mobile Number">
-</div>
-
-<div class="form-group">
-<label>ITR Requirement</label>
-<textarea id="itrRequirement"
-placeholder="जैसे Salary ITR, Business ITR आदि"></textarea>
-</div>
-
-<button class="btn btn-primary" onclick="submitITR()">
-Submit ITR Requirement
-</button>
-
-<div id="itrSuccess" class="success">
-आपकी ITR requirement submit हो गई है.
-</div>
-
-<div id="itrError" class="error"></div>
 
 </div>
 
@@ -719,99 +492,50 @@ Submit ITR Requirement
 </section>
 
 
-<!-- ================= ACCOUNTANT JOB ================= -->
+<!-- ================= JOBS ================= -->
 
 <section id="jobs" class="page">
 
 <div class="container">
 
-<div class="section-title">
-
-<h2>👨‍💼 Accountant Job Service</h2>
-
-<p>
-अगर आपकी company/business को Accountant की जरूरत है,
-तो अपनी requirement भेजें.
-</p>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-<div class="icon">👨‍💼</div>
-<h3>Accountant Required</h3>
-<p>
-अगर आपकी company को Accountant, Junior Accountant,
-Senior Accountant या Tally operator की आवश्यकता है,
-तो requirement भेज सकते हैं.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">💻</div>
-<h3>Tally Accountant</h3>
-<p>
-Tally Prime और accounting work के लिए
-Accountant requirement submit करें.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">📊</div>
-<h3>GST Accountant</h3>
-<p>
-GST और accounting work के लिए Accountant की
-requirement submit कर सकते हैं.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">🏢</div>
-<h3>Business Recruitment</h3>
-<p>
-अपने business के लिए Accountant hiring requirement
-submit करें.
-</p>
-</div>
-
-</div>
-
-<br>
+<h1>Accountant Job Requirement</h1>
 
 <div class="form-box">
 
-<h3 style="color:#0b3d91;margin-bottom:20px;">
-Accountant की जरूरत है?
-</h3>
-
-<div class="form-group">
 <label>Company / Business Name</label>
-<input id="jobName" type="text"
-placeholder="Company / Business Name">
-</div>
 
-<div class="form-group">
+<input
+id="jobCompany"
+placeholder="Enter company or business name">
+
 <label>Mobile Number</label>
-<input id="jobPhone" type="tel"
-placeholder="Mobile Number">
-</div>
 
-<div class="form-group">
+<input
+id="jobPhone"
+maxlength="10"
+placeholder="10 digit mobile number">
+
 <label>Job Requirement</label>
-<textarea id="jobRequirement"
-placeholder="जैसे Tally Accountant चाहिए, Salary ₹25,000 आदि"></textarea>
-</div>
 
-<button class="btn btn-green" onclick="submitJobRequirement()">
-Accountant Requirement Submit करें
+<textarea
+id="jobRequirement"
+placeholder="Example: Need Tally Accountant, GST Accountant etc."></textarea>
+
+<button class="btn"
+onclick="submitJobRequirement()">
+    Submit Requirement
 </button>
 
-<div id="jobSuccess" class="success">
-Accountant job requirement submit हो गई है.
+<div id="jobMessage"
+class="message">
 </div>
 
-<div id="jobError" class="error"></div>
+<a
+class="whatsapp"
+target="_blank"
+href="https://wa.me/919829051866">
+Contact on WhatsApp
+</a>
 
 </div>
 
@@ -826,94 +550,63 @@ Accountant job requirement submit हो गई है.
 
 <div class="container">
 
-<div class="section-title">
-
-<h2>📝 Submit Your Requirement</h2>
-
-<p>
-अपनी accounting या अन्य service requirement हमें भेजें.
-</p>
-
-</div>
+<h1>Service Requirement</h1>
 
 <div class="form-box">
 
-<div class="form-group">
-<label>Name *</label>
-<input id="reqName" type="text"
-placeholder="अपना नाम">
-</div>
+<label>Name</label>
 
-<div class="form-group">
-<label>Mobile Number *</label>
-<input id="reqPhone" type="tel"
-placeholder="Mobile Number">
-</div>
+<input
+id="reqName"
+placeholder="Enter your name">
 
-<div class="form-group">
-<label>Service *</label>
+<label>Mobile Number</label>
+
+<input
+id="reqPhone"
+maxlength="10"
+placeholder="10 digit mobile number">
+
+<label>Email</label>
+
+<input
+id="reqEmail"
+type="email"
+placeholder="Email address">
+
+<label>Service</label>
 
 <select id="reqService">
 
-<option value="">Select Service</option>
+<option value="">
+Select Service
+</option>
 
 <option>Accounting</option>
 <option>GST</option>
 <option>TDS</option>
-<option>ITR Filing</option>
+<option>ITR</option>
 <option>Tally Prime</option>
-<option>Excel Work</option>
-<option>Accountant Job Requirement</option>
+<option>Excel</option>
+<option>Accountant Job</option>
 <option>Other</option>
 
 </select>
 
-</div>
+<label>Requirement</label>
 
-<div class="form-group">
+<textarea
+id="reqRequirement"
+placeholder="Write your requirement"></textarea>
 
-<label>Your Requirement *</label>
-
-<textarea id="reqText"
-placeholder="अपनी requirement यहाँ लिखें"></textarea>
-
-</div>
-
-<button class="btn btn-primary"
+<button class="btn"
 onclick="submitRequirement()">
-
 Submit Requirement
-
 </button>
 
-<div id="reqSuccess" class="success">
-Requirement successfully submit हो गई है.
+<div id="reqMessage"
+class="message">
 </div>
-
-<div id="reqError" class="error"></div>
-
-</div>
-
-<br>
-
-<div class="info">
-
-<b>Direct Contact</b>
-
-<br><br>
-
-📱 Mobile: +91 73578 91332
-
-<br><br>
-
-<a href="https://wa.me/917357891332"
-target="_blank">
-
-<button class="btn btn-green">
-WhatsApp पर Contact करें
-</button>
-
-</a>
 
 </div>
 
@@ -922,102 +615,143 @@ WhatsApp पर Contact करें
 </section>
 
 
-<!-- ================= REVIEWS LAST PAGE ================= -->
+<!-- ================= REVIEWS ================= -->
 
 <section id="reviews" class="page">
 
 <div class="container">
 
-<div class="section-title">
+<h1>Customer Reviews</h1>
 
-<h2>⭐ Customer Reviews</h2>
-
-<p>
-हमारी service लेने के बाद अपना अनुभव जरूर share करें.
-</p>
-
+<div
+id="reviewList">
+Loading reviews...
 </div>
+
 
 <div class="form-box">
 
-<h3 style="color:#0b3d91;margin-bottom:20px;">
-Write Your Review
-</h3>
+<h2>Give Your Review</h2>
 
-<div class="form-group">
+<label>Name</label>
 
-<label>Name *</label>
-
-<input id="reviewName"
-type="text"
-placeholder="अपना नाम">
-
-</div>
-
-<div class="form-group">
+<input
+id="reviewName"
+placeholder="Your name">
 
 <label>Mobile Number</label>
 
-<input id="reviewPhone"
-type="tel"
-placeholder="Mobile Number">
+<input
+id="reviewPhone"
+maxlength="10"
+placeholder="10 digit mobile number">
 
-</div>
-
-<div class="form-group">
-
-<label>Rating *</label>
+<label>Rating</label>
 
 <select id="reviewRating">
 
 <option value="">Select Rating</option>
-<option value="5">⭐⭐⭐⭐⭐ 5 Star</option>
-<option value="4">⭐⭐⭐⭐ 4 Star</option>
-<option value="3">⭐⭐⭐ 3 Star</option>
-<option value="2">⭐⭐ 2 Star</option>
-<option value="1">⭐ 1 Star</option>
+<option value="5">★★★★★ - 5</option>
+<option value="4">★★★★ - 4</option>
+<option value="3">★★★ - 3</option>
+<option value="2">★★ - 2</option>
+<option value="1">★ - 1</option>
 
 </select>
 
-</div>
+<label>Your Review</label>
 
-<div class="form-group">
+<textarea
+id="reviewText"
+placeholder="Write your review"></textarea>
 
-<label>Your Review *</label>
-
-<textarea id="reviewText"
-placeholder="अपना experience लिखें"></textarea>
-
-</div>
-
-<button class="btn btn-primary"
+<button class="btn"
 onclick="submitReview()">
-
 Submit Review
-
 </button>
 
-<div id="reviewSuccess" class="success">
-आपका review submit हो गया है. Approval के बाद website पर दिखाई देगा.
+<div
+id="reviewMessage"
+class="message">
 </div>
 
-<div id="reviewError" class="error"></div>
+</div>
 
 </div>
 
-<br><br>
+</section>
 
-<h2 style="text-align:center;color:#0b3d91;">
-Customer Reviews
-</h2>
 
-<br>
+<!-- ================= ADMIN PAGE ================= -->
 
-<div id="reviewList">
+<section id="admin" class="page">
 
-<p style="text-align:center;color:#777;">
-Reviews loading...
-</p>
+<div class="container">
+
+<h1>Admin Panel</h1>
+
+<div class="admin-buttons">
+
+<button class="btn"
+onclick="showAdminTab('adminUsers')">
+Users
+</button>
+
+<button class="btn"
+onclick="showAdminTab('adminRequirements')">
+Requirements
+</button>
+
+<button class="btn"
+onclick="showAdminTab('adminReviews')">
+Reviews
+</button>
+
+<button class="btn"
+onclick="adminLogout()">
+Logout
+</button>
+
+</div>
+
+
+<div id="adminUsers"
+class="admin-tab">
+
+<h2>Registered Users</h2>
+
+<div id="usersTable"
+class="table-box">
+Loading...
+</div>
+
+</div>
+
+
+<div id="adminRequirements"
+class="admin-tab"
+style="display:none">
+
+<h2>Requirements / Accountant Jobs</h2>
+
+<div id="requirementsTable"
+class="table-box">
+Loading...
+</div>
+
+</div>
+
+
+<div id="adminReviews"
+class="admin-tab"
+style="display:none">
+
+<h2>Reviews Approval</h2>
+
+<div id="adminReviewsTable"
+class="table-box">
+Loading...
+</div>
 
 </div>
 
@@ -1028,7 +762,8 @@ Reviews loading...
 
 <!-- ================= LOGIN MODAL ================= -->
 
-<div id="loginModal" class="modal">
+<div id="loginModal"
+class="modal">
 
 <div class="modal-content">
 
@@ -1037,28 +772,31 @@ onclick="closeModal('loginModal')">
 &times;
 </span>
 
-<h2 style="color:#0b3d91;margin-bottom:20px;">
-Customer Login
-</h2>
+<h2>Login</h2>
 
-<div class="form-group">
 <label>Mobile Number</label>
-<input id="loginPhone" type="tel"
+
+<input
+id="loginPhone"
+maxlength="10"
 placeholder="Mobile Number">
-</div>
 
-<div class="form-group">
 <label>Password</label>
-<input id="loginPassword" type="password"
-placeholder="Password">
-</div>
 
-<button class="btn btn-primary"
+<input
+id="loginPassword"
+type="password"
+placeholder="Password">
+
+<button class="btn"
 onclick="loginUser()">
 Login
 </button>
 
-<div id="loginError" class="error"></div>
+<div
+id="loginMessage"
+class="message">
+</div>
 
 </div>
 
@@ -1067,7 +805,8 @@ Login
 
 <!-- ================= REGISTER MODAL ================= -->
 
-<div id="registerModal" class="modal">
+<div id="registerModal"
+class="modal">
 
 <div class="modal-content">
 
@@ -1076,141 +815,72 @@ onclick="closeModal('registerModal')">
 &times;
 </span>
 
-<h2 style="color:#0b3d91;margin-bottom:20px;">
-Customer Registration
-</h2>
+<h2>Register</h2>
 
-<div class="form-group">
 <label>Name</label>
-<input id="regName" type="text"
+
+<input
+id="registerName"
 placeholder="Your Name">
-</div>
 
-<div class="form-group">
 <label>Mobile Number</label>
-<input id="regPhone" type="tel"
-placeholder="Mobile Number">
-</div>
 
-<div class="form-group">
+<input
+id="registerPhone"
+maxlength="10"
+placeholder="10 digit mobile number">
+
 <label>Password</label>
-<input id="regPassword"
-type="password"
-placeholder="Create Password">
-</div>
 
-<button class="btn btn-green"
+<input
+id="registerPassword"
+type="password"
+placeholder="Minimum 6 characters">
+
+<button class="btn"
 onclick="registerUser()">
 Register
 </button>
 
-<div id="registerSuccess"
-class="success"></div>
-
-<div id="registerError"
-class="error"></div>
-
+<div
+id="registerMessage"
+class="message">
 </div>
 
 </div>
 
-
-<!-- ================= CUSTOMER DASHBOARD ================= -->
-
-<section id="dashboard" class="page">
-
-<div class="container">
-
-<div class="user-box">
-
-<h2 style="color:#0b3d91;">
-Welcome, <span id="dashboardName"></span> 👋
-</h2>
-
-<p>
-आप अपने customer dashboard से services और requirements submit कर सकते हैं.
-</p>
-
 </div>
 
-<div class="dashboard-nav">
 
-<button class="active"
-onclick="dashboardPanel('dashHome',this)">
-Dashboard
+<!-- ================= ADMIN LOGIN MODAL ================= -->
+
+<div id="adminModal"
+class="modal">
+
+<div class="modal-content">
+
+<span class="close"
+onclick="closeModal('adminModal')">
+&times;
+</span>
+
+<h2>Admin Login</h2>
+
+<label>Admin PIN</label>
+
+<input
+id="adminPin"
+type="password"
+placeholder="Enter Admin PIN">
+
+<button class="btn"
+onclick="adminLogin()">
+Admin Login
 </button>
 
-<button onclick="dashboardPanel('dashRequirement',this)">
-Requirement
-</button>
-
-<button onclick="dashboardPanel('dashProfile',this)">
-Profile
-</button>
-
-<button onclick="logoutUser()">
-Logout
-</button>
-
-</div>
-
-
-<div id="dashHome"
-class="dashboard-panel active">
-
-<div class="cards">
-
-<div class="card">
-
-<div class="icon">📊</div>
-
-<h3>Accounting</h3>
-
-<p>
-Accounting और Tally services के लिए requirement भेजें.
-</p>
-
-<button class="btn btn-primary"
-onclick="showPage('accounting')">
-View
-</button>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">🧾</div>
-
-<h3>ITR</h3>
-
-<p>
-ITR Filing service के लिए requirement submit करें.
-</p>
-
-<button class="btn btn-primary"
-onclick="showPage('itr')">
-ITR
-</button>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">👨‍💼</div>
-
-<h3>Accountant Job</h3>
-
-<p>
-Accountant की requirement submit करें.
-</p>
-
-<button class="btn btn-primary"
-onclick="showPage('jobs')">
-Job
-</button>
-
+<div
+id="adminLoginMessage"
+class="message">
 </div>
 
 </div>
@@ -1218,93 +888,18 @@ Job
 </div>
 
 
-<div id="dashRequirement"
-class="dashboard-panel">
-
-<div class="form-box">
-
-<h3>Submit Requirement</h3>
-
-<br>
-
-<button class="btn btn-primary"
-onclick="showPage('requirement')">
-Open Requirement Form
-</button>
-
-</div>
-
-</div>
-
-
-<div id="dashProfile"
-class="dashboard-panel">
-
-<div class="form-box">
-
-<h3 style="color:#0b3d91;">
-My Profile
-</h3>
-
-<br>
-
-<p>
-<b>Name:</b>
-<span id="profileName"></span>
-</p>
-
-<br>
-
-<p>
-<b>Mobile:</b>
-<span id="profilePhone"></span>
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
 <h3>Sachin Accounting Solution</h3>
 
 <p>
-Accounting | GST | TDS | ITR | Tally | Excel | Accountant Job Service
-</p>
-
-<div class="footer-links">
-
-<button onclick="showPage('home')">Home</button>
-
-<button onclick="showPage('accounting')">Accounting</button>
-
-<button onclick="showPage('itr')">ITR</button>
-
-<button onclick="showPage('jobs')">Accountant Jobs</button>
-
-<button onclick="showPage('requirement')">Requirement</button>
-
-<button onclick="showPage('reviews')">Reviews</button>
-
-</div>
-
-<p>
-📍 Jaipur, Rajasthan
+Accounting | GST | TDS | ITR | Tally | Excel
 </p>
 
 <p>
-📱 +91 73578 91332
-</p>
-
-<br>
-
-<p>
-© 2026 Sachin Accounting Solution. All Rights Reserved.
+Jaipur, Rajasthan
 </p>
 
 </footer>
@@ -1320,91 +915,32 @@ const API_URL =
 "https://script.google.com/macros/s/AKfycbwyLG9lDvhD9PSHapn0jyKArLk31Mz6_7xVVFhmG0tM6r54g4cgt5P3HOQuMqPbeSwv/exec";
 
 
-/* =====================================================
-   PAGE NAVIGATION
-   ===================================================== */
-
-function showPage(pageId){
-
-    document.querySelectorAll(".page")
-    .forEach(function(page){
-        page.classList.remove("active");
-    });
-
-    const page =
-    document.getElementById(pageId);
-
-    if(page){
-        page.classList.add("active");
-    }
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-    if(pageId === "reviews"){
-        loadReviews();
-    }
-
-    if(pageId === "dashboard"){
-        loadDashboardUser();
-    }
-}
-
-
-/* =====================================================
-   MODAL
-   ===================================================== */
-
-function openModal(id){
-    document.getElementById(id).style.display="block";
-}
-
-function closeModal(id){
-    document.getElementById(id).style.display="none";
-}
-
-window.onclick=function(event){
-
-    document.querySelectorAll(".modal")
-    .forEach(function(modal){
-
-        if(event.target === modal){
-            modal.style.display="none";
-        }
-
-    });
-
-};
-
-
-/* =====================================================
-   API FUNCTION
-   ===================================================== */
+/* ================= API ================= */
 
 async function api(action,data={}){
 
+    const params = new URLSearchParams();
+
+    params.append("action",action);
+
+    Object.keys(data).forEach(function(key){
+
+        params.append(
+            key,
+            data[key] ?? ""
+        );
+
+    });
+
     try{
-
-        const params =
-        new URLSearchParams();
-
-        params.append("action",action);
-
-        Object.keys(data)
-        .forEach(function(key){
-
-            params.append(
-                key,
-                data[key]
-            );
-
-        });
 
         const response =
         await fetch(
-            API_URL + "?" + params.toString()
+            API_URL + "?" + params.toString(),
+            {
+                method:"GET",
+                cache:"no-store"
+            }
         );
 
         return await response.json();
@@ -1412,11 +948,10 @@ async function api(action,data={}){
     }
     catch(error){
 
-        console.error(error);
-
         return {
-            success:false,
-            message:"Server connection error"
+            ok:false,
+            message:
+            "Server connection error. Please try again."
         };
 
     }
@@ -1424,39 +959,102 @@ async function api(action,data={}){
 }
 
 
-/* =====================================================
-   REGISTER
-   ===================================================== */
+/* ================= PAGE ================= */
+
+function showPage(pageId){
+
+    document
+    .querySelectorAll(".page")
+    .forEach(function(page){
+
+        page.classList.remove("active");
+
+    });
+
+
+    const page =
+    document.getElementById(pageId);
+
+    if(page){
+
+        page.classList.add("active");
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    }
+
+
+    if(pageId === "reviews"){
+
+        loadReviews();
+
+    }
+
+
+    if(pageId === "admin"){
+
+        loadAdmin();
+
+    }
+
+}
+
+
+/* ================= MODAL ================= */
+
+function openModal(id){
+
+    document.getElementById(id)
+    .style.display="block";
+
+}
+
+
+function closeModal(id){
+
+    document.getElementById(id)
+    .style.display="none";
+
+}
+
+
+window.onclick=function(event){
+
+    document
+    .querySelectorAll(".modal")
+    .forEach(function(modal){
+
+        if(event.target === modal){
+
+            modal.style.display="none";
+
+        }
+
+    });
+
+};
+
+
+/* ================= REGISTER ================= */
 
 async function registerUser(){
 
     const name =
-    document.getElementById("regName").value.trim();
+    document.getElementById("registerName").value.trim();
 
     const phone =
-    document.getElementById("regPhone").value.trim();
+    document.getElementById("registerPhone").value.trim();
 
     const password =
-    document.getElementById("regPassword").value.trim();
+    document.getElementById("registerPassword").value;
 
-    const success =
-    document.getElementById("registerSuccess");
 
-    const error =
-    document.getElementById("registerError");
+    const box =
+    document.getElementById("registerMessage");
 
-    success.style.display="none";
-    error.style.display="none";
-
-    if(!name || !phone || !password){
-
-        error.innerText =
-        "कृपया सभी details भरें.";
-
-        error.style.display="block";
-
-        return;
-    }
 
     const result =
     await api("register",{
@@ -1465,35 +1063,34 @@ async function registerUser(){
         password:password
     });
 
-    if(result.success){
 
-        success.innerText =
-        result.message ||
-        "Registration successful.";
+    showMessage(
+        box,
+        result.ok,
+        result.message
+    );
 
-        success.style.display="block";
 
-        document.getElementById("regName").value="";
-        document.getElementById("regPhone").value="";
-        document.getElementById("regPassword").value="";
+    if(result.ok){
 
-    }
-    else{
+        document.getElementById(
+            "registerName"
+        ).value="";
 
-        error.innerText =
-        result.message ||
-        "Registration failed.";
+        document.getElementById(
+            "registerPhone"
+        ).value="";
 
-        error.style.display="block";
+        document.getElementById(
+            "registerPassword"
+        ).value="";
 
     }
 
 }
 
 
-/* =====================================================
-   LOGIN
-   ===================================================== */
+/* ================= LOGIN ================= */
 
 async function loginUser(){
 
@@ -1501,22 +1098,12 @@ async function loginUser(){
     document.getElementById("loginPhone").value.trim();
 
     const password =
-    document.getElementById("loginPassword").value.trim();
+    document.getElementById("loginPassword").value;
 
-    const error =
-    document.getElementById("loginError");
 
-    error.style.display="none";
+    const box =
+    document.getElementById("loginMessage");
 
-    if(!phone || !password){
-
-        error.innerText =
-        "Mobile number और password डालें.";
-
-        error.style.display="block";
-
-        return;
-    }
 
     const result =
     await api("login",{
@@ -1524,144 +1111,47 @@ async function loginUser(){
         password:password
     });
 
-    if(result.success){
 
-        localStorage.setItem(
-            "sas_user",
-            JSON.stringify({
-                name:result.name,
-                phone:result.phone,
-                loginCount:result.loginCount
-            })
+    showMessage(
+        box,
+        result.ok,
+        result.message
+    );
+
+
+    if(result.ok){
+
+        sessionStorage.setItem(
+            "sas_user_name",
+            result.name || ""
         );
 
-        closeModal("loginModal");
-
-        document.getElementById("loginPhone").value="";
-        document.getElementById("loginPassword").value="";
-
-        loadDashboardUser();
-
-        showPage("dashboard");
-
-    }
-    else{
-
-        error.innerText =
-        result.message ||
-        "Invalid mobile number or password.";
-
-        error.style.display="block";
-
-    }
-
-}
+        sessionStorage.setItem(
+            "sas_user_phone",
+            result.phone || ""
+        );
 
 
-/* =====================================================
-   USER DATA
-   ===================================================== */
+        setTimeout(function(){
 
-function getLoggedInUser(){
+            closeModal("loginModal");
 
-    try{
+            document.getElementById(
+                "loginPhone"
+            ).value="";
 
-        const data =
-        localStorage.getItem("sas_user");
+            document.getElementById(
+                "loginPassword"
+            ).value="";
 
-        if(!data){
-            return null;
-        }
-
-        return JSON.parse(data);
-
-    }
-    catch(e){
-
-        return null;
+        },700);
 
     }
 
 }
 
 
-/* =====================================================
-   DASHBOARD
-   ===================================================== */
-
-function loadDashboardUser(){
-
-    const user =
-    getLoggedInUser();
-
-    if(!user){
-        return;
-    }
-
-    document.getElementById(
-        "dashboardName"
-    ).innerText =
-    user.name || "Customer";
-
-    document.getElementById(
-        "profileName"
-    ).innerText =
-    user.name || "";
-
-    document.getElementById(
-        "profilePhone"
-    ).innerText =
-    user.phone || "";
-
-}
-
-
-function dashboardPanel(id,button){
-
-    document.querySelectorAll(
-        ".dashboard-panel"
-    )
-    .forEach(function(panel){
-
-        panel.classList.remove("active");
-
-    });
-
-    document.getElementById(id)
-    .classList.add("active");
-
-    document.querySelectorAll(
-        ".dashboard-nav button"
-    )
-    .forEach(function(btn){
-
-        btn.classList.remove("active");
-
-    });
-
-    button.classList.add("active");
-
-}
-
-
-/* =====================================================
-   LOGOUT
-   ===================================================== */
-
-function logoutUser(){
-
-    localStorage.removeItem("sas_user");
-
-    alert("आप logout हो गए हैं.");
-
-    showPage("home");
-
-}
-
-
-/* =====================================================
-   REQUIREMENT
-   ===================================================== */
+/* ================= REQUIREMENT ================= */
 
 async function submitRequirement(){
 
@@ -1671,241 +1161,129 @@ async function submitRequirement(){
     const phone =
     document.getElementById("reqPhone").value.trim();
 
+    const email =
+    document.getElementById("reqEmail").value.trim();
+
     const service =
     document.getElementById("reqService").value;
 
     const requirement =
-    document.getElementById("reqText").value.trim();
+    document.getElementById("reqRequirement").value.trim();
 
-    const success =
-    document.getElementById("reqSuccess");
 
-    const error =
-    document.getElementById("reqError");
+    const box =
+    document.getElementById("reqMessage");
 
-    success.style.display="none";
-    error.style.display="none";
-
-    if(!name || !phone || !service || !requirement){
-
-        error.innerText =
-        "कृपया सभी required details भरें.";
-
-        error.style.display="block";
-
-        return;
-    }
 
     const result =
     await api("requirement",{
 
         name:name,
         phone:phone,
+        email:email,
         service:service,
         requirement:requirement
 
     });
 
-    if(result.success){
 
-        success.innerText =
-        result.message ||
-        "Requirement successfully submitted.";
+    showMessage(
+        box,
+        result.ok,
+        result.message
+    );
 
-        success.style.display="block";
 
-        document.getElementById("reqText").value="";
+    if(result.ok){
 
-    }
-    else{
-
-        error.innerText =
-        result.message ||
-        "Requirement submit नहीं हुई.";
-
-        error.style.display="block";
+        document.getElementById("reqName").value="";
+        document.getElementById("reqPhone").value="";
+        document.getElementById("reqEmail").value="";
+        document.getElementById("reqService").value="";
+        document.getElementById("reqRequirement").value="";
 
     }
 
 }
 
 
-/* =====================================================
-   ITR REQUIREMENT
-   ===================================================== */
-
-async function submitITR(){
-
-    const name =
-    document.getElementById("itrName").value.trim();
-
-    const phone =
-    document.getElementById("itrPhone").value.trim();
-
-    const requirement =
-    document.getElementById("itrRequirement")
-    .value.trim();
-
-    const success =
-    document.getElementById("itrSuccess");
-
-    const error =
-    document.getElementById("itrError");
-
-    success.style.display="none";
-    error.style.display="none";
-
-    if(!name || !phone || !requirement){
-
-        error.innerText =
-        "कृपया सभी details भरें.";
-
-        error.style.display="block";
-
-        return;
-    }
-
-    const result =
-    await api("requirement",{
-
-        name:name,
-        phone:phone,
-        service:"ITR Filing",
-        requirement:requirement
-
-    });
-
-    if(result.success){
-
-        success.style.display="block";
-
-        document.getElementById(
-            "itrRequirement"
-        ).value="";
-
-    }
-    else{
-
-        error.innerText =
-        result.message ||
-        "Requirement submit नहीं हुई.";
-
-        error.style.display="block";
-
-    }
-
-}
-
-
-/* =====================================================
-   ACCOUNTANT JOB REQUIREMENT
-   ===================================================== */
+/* ================= JOB REQUIREMENT ================= */
 
 async function submitJobRequirement(){
 
-    const name =
-    document.getElementById("jobName")
-    .value.trim();
+    const company =
+    document.getElementById("jobCompany").value.trim();
 
     const phone =
-    document.getElementById("jobPhone")
-    .value.trim();
+    document.getElementById("jobPhone").value.trim();
 
     const requirement =
-    document.getElementById("jobRequirement")
-    .value.trim();
+    document.getElementById("jobRequirement").value.trim();
 
-    const success =
-    document.getElementById("jobSuccess");
 
-    const error =
-    document.getElementById("jobError");
+    const box =
+    document.getElementById("jobMessage");
 
-    success.style.display="none";
-    error.style.display="none";
-
-    if(!name || !phone || !requirement){
-
-        error.innerText =
-        "कृपया सभी details भरें.";
-
-        error.style.display="block";
-
-        return;
-    }
 
     const result =
     await api("requirement",{
 
-        name:name,
+        name:company,
         phone:phone,
-        service:"Accountant Job Requirement",
-        requirement:requirement
+        service:"Accountant Job",
+
+        requirement:
+        requirement
 
     });
 
-    if(result.success){
 
-        success.style.display="block";
+    showMessage(
+        box,
+        result.ok,
+        result.message
+    );
+
+
+    if(result.ok){
+
+        document.getElementById(
+            "jobCompany"
+        ).value="";
+
+        document.getElementById(
+            "jobPhone"
+        ).value="";
 
         document.getElementById(
             "jobRequirement"
         ).value="";
 
     }
-    else{
-
-        error.innerText =
-        result.message ||
-        "Requirement submit नहीं हुई.";
-
-        error.style.display="block";
-
-    }
 
 }
 
 
-/* =====================================================
-   REVIEW SUBMIT
-   ===================================================== */
+/* ================= REVIEW SUBMIT ================= */
 
 async function submitReview(){
 
     const name =
-    document.getElementById("reviewName")
-    .value.trim();
+    document.getElementById("reviewName").value.trim();
 
     const phone =
-    document.getElementById("reviewPhone")
-    .value.trim();
+    document.getElementById("reviewPhone").value.trim();
 
     const rating =
-    document.getElementById("reviewRating")
-    .value;
+    document.getElementById("reviewRating").value;
 
     const review =
-    document.getElementById("reviewText")
-    .value.trim();
+    document.getElementById("reviewText").value.trim();
 
-    const success =
-    document.getElementById("reviewSuccess");
 
-    const error =
-    document.getElementById("reviewError");
+    const box =
+    document.getElementById("reviewMessage");
 
-    success.style.display="none";
-    error.style.display="none";
-
-    if(!name || !rating || !review){
-
-        error.innerText =
-        "Name, Rating और Review भरना जरूरी है.";
-
-        error.style.display="block";
-
-        return;
-    }
 
     const result =
     await api("review",{
@@ -1917,195 +1295,697 @@ async function submitReview(){
 
     });
 
-    if(result.success){
 
-        success.style.display="block";
+    showMessage(
+        box,
+        result.ok,
+        result.message
+    );
+
+
+    if(result.ok){
 
         document.getElementById(
-            "reviewText"
+            "reviewName"
+        ).value="";
+
+        document.getElementById(
+            "reviewPhone"
         ).value="";
 
         document.getElementById(
             "reviewRating"
         ).value="";
 
-        loadReviews();
+        document.getElementById(
+            "reviewText"
+        ).value="";
 
-    }
-    else{
-
-        error.innerText =
-        result.message ||
-        "Review submit नहीं हुआ.";
-
-        error.style.display="block";
+        /*
+         Review admin approval ke baad
+         public page par dikhega.
+        */
 
     }
 
 }
 
 
-/* =====================================================
-   LOAD REVIEWS
-   ===================================================== */
+/* ================= LOAD REVIEWS ================= */
 
 async function loadReviews(){
 
-    const list =
+    const box =
     document.getElementById("reviewList");
 
-    if(!list){
-        return;
-    }
+    box.innerHTML =
+    "<p>Loading reviews...</p>";
 
-    list.innerHTML =
-    "<p style='text-align:center'>Reviews loading...</p>";
 
     const result =
     await api("reviews");
 
-    if(!result.success){
 
-        list.innerHTML =
-        "<p style='text-align:center;color:#777'>Reviews अभी load नहीं हो सके.</p>";
+    if(!result.ok){
+
+        box.innerHTML =
+        "<p>Reviews load nahi ho paaye.</p>";
 
         return;
     }
+
 
     const reviews =
     result.reviews || [];
 
-    if(reviews.length === 0){
 
-        list.innerHTML =
-        "<p style='text-align:center;color:#777'>अभी कोई approved review नहीं है.</p>";
+    if(!reviews.length){
+
+        box.innerHTML =
+        "<p>Abhi approved reviews available nahi hain.</p>";
 
         return;
     }
 
-    list.innerHTML="";
+
+    let html="";
+
 
     reviews.forEach(function(item){
 
-        const div =
-        document.createElement("div");
+        const stars =
+        "★".repeat(
+            Math.max(
+                0,
+                Math.min(
+                    5,
+                    Number(item.rating || 0)
+                )
+            )
+        );
 
-        div.className="review";
 
-        const rating =
-        Number(item.rating || 5);
+        html += `
 
-        let stars="";
+        <div class="review-card">
 
-        for(let i=1;i<=5;i++){
-
-            stars +=
-            i<=rating ? "★" : "☆";
-
-        }
-
-        div.innerHTML = `
-
-            <h3>${escapeHTML(item.name || "Customer")}</h3>
+            <h3>
+                ${escapeHTML(item.name)}
+            </h3>
 
             <div class="stars">
-            ${stars}
+                ${stars}
             </div>
 
-            <p style="margin-top:10px;line-height:1.6;">
-            ${escapeHTML(item.review || "")}
+            <p>
+                ${escapeHTML(item.review)}
             </p>
+
+            <small>
+                ${escapeHTML(item.submitted || "")}
+            </small>
+
+        </div>
 
         `;
 
-        list.appendChild(div);
-
     });
+
+
+    box.innerHTML=html;
 
 }
 
 
-/* =====================================================
-   AUTO FILL LOGGED USER
-   ===================================================== */
+/* ================= ADMIN LOGIN ================= */
 
-function fillUserDetails(){
+let ADMIN_PIN_SESSION="";
 
-    const user =
-    getLoggedInUser();
 
-    if(!user){
-        return;
+async function adminLogin(){
+
+    const pin =
+    document.getElementById("adminPin")
+    .value.trim();
+
+    const box =
+    document.getElementById(
+        "adminLoginMessage"
+    );
+
+
+    const result =
+    await api("admin",{
+        pin:pin
+    });
+
+
+    showMessage(
+        box,
+        result.ok,
+        result.message
+    );
+
+
+    if(result.ok){
+
+        ADMIN_PIN_SESSION=pin;
+
+        sessionStorage.setItem(
+            "sas_admin_pin",
+            pin
+        );
+
+
+        document.getElementById(
+            "adminPin"
+        ).value="";
+
+
+        closeModal("adminModal");
+
+        showPage("admin");
+
     }
 
-    const fields = [
+}
 
-        ["reqName",user.name],
-        ["reqPhone",user.phone],
 
-        ["itrName",user.name],
-        ["itrPhone",user.phone],
+/* ================= LOAD ADMIN ================= */
 
-        ["reviewName",user.name],
-        ["reviewPhone",user.phone]
+async function loadAdmin(){
 
-    ];
+    const pin =
+    ADMIN_PIN_SESSION ||
+    sessionStorage.getItem(
+        "sas_admin_pin"
+    );
 
-    fields.forEach(function(item){
 
-        const element =
-        document.getElementById(item[0]);
+    if(!pin){
 
-        if(element){
-            element.value =
-            item[1] || "";
-        }
+        return;
+
+    }
+
+
+    ADMIN_PIN_SESSION=pin;
+
+
+    const result =
+    await api("admin",{
+        pin:pin
+    });
+
+
+    if(!result.ok){
+
+        ADMIN_PIN_SESSION="";
+
+        sessionStorage.removeItem(
+            "sas_admin_pin"
+        );
+
+        return;
+
+    }
+
+
+    renderUsers(
+        result.users || []
+    );
+
+
+    renderRequirements(
+        result.requirements || []
+    );
+
+
+    renderAdminReviews(
+        result.reviews || []
+    );
+
+}
+
+
+/* ================= USERS ================= */
+
+function renderUsers(users){
+
+    const box =
+    document.getElementById(
+        "usersTable"
+    );
+
+
+    if(!users.length){
+
+        box.innerHTML =
+        "<p>No users found.</p>";
+
+        return;
+
+    }
+
+
+    let html=`
+
+    <table>
+
+    <tr>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Registered</th>
+        <th>Last Login</th>
+        <th>Login Count</th>
+    </tr>
+
+    `;
+
+
+    users.forEach(function(item){
+
+        html += `
+
+        <tr>
+
+        <td>
+            ${escapeHTML(item.name)}
+        </td>
+
+        <td>
+            ${escapeHTML(item.phone)}
+        </td>
+
+        <td>
+            ${escapeHTML(item.registered)}
+        </td>
+
+        <td>
+            ${escapeHTML(item.lastLogin)}
+        </td>
+
+        <td>
+            ${item.logins}
+        </td>
+
+        </tr>
+
+        `;
 
     });
 
-}
 
+    html += "</table>";
 
-/* =====================================================
-   HTML ESCAPE
-   ===================================================== */
-
-function escapeHTML(text){
-
-    const div =
-    document.createElement("div");
-
-    div.textContent =
-    text == null ? "" : text;
-
-    return div.innerHTML;
+    box.innerHTML=html;
 
 }
 
 
-/* =====================================================
-   START
-   ===================================================== */
+/* ================= REQUIREMENTS ================= */
+
+function renderRequirements(items){
+
+    const box =
+    document.getElementById(
+        "requirementsTable"
+    );
+
+
+    if(!items.length){
+
+        box.innerHTML =
+        "<p>No requirements found.</p>";
+
+        return;
+
+    }
+
+
+    let html=`
+
+    <table>
+
+    <tr>
+        <th>Name / Company</th>
+        <th>Mobile</th>
+        <th>Service</th>
+        <th>Requirement</th>
+        <th>Email</th>
+        <th>Date</th>
+    </tr>
+
+    `;
+
+
+    items.forEach(function(item){
+
+        html += `
+
+        <tr>
+
+        <td>
+            ${escapeHTML(item.name)}
+        </td>
+
+        <td>
+            ${escapeHTML(item.phone)}
+        </td>
+
+        <td>
+            ${escapeHTML(item.service)}
+        </td>
+
+        <td>
+            ${escapeHTML(item.requirement)}
+        </td>
+
+        <td>
+            ${escapeHTML(item.email)}
+        </td>
+
+        <td>
+            ${escapeHTML(item.submitted)}
+        </td>
+
+        </tr>
+
+        `;
+
+    });
+
+
+    html += "</table>";
+
+    box.innerHTML=html;
+
+}
+
+
+/* ================= ADMIN REVIEWS ================= */
+
+function renderAdminReviews(items){
+
+    const box =
+    document.getElementById(
+        "adminReviewsTable"
+    );
+
+
+    if(!items.length){
+
+        box.innerHTML =
+        "<p>No reviews found.</p>";
+
+        return;
+
+    }
+
+
+    let html=`
+
+    <table>
+
+    <tr>
+
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Rating</th>
+        <th>Review</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th>Action</th>
+
+    </tr>
+
+    `;
+
+
+    items.forEach(function(item){
+
+        let action="";
+
+
+        if(item.status === "Pending"){
+
+            action=`
+
+            <button
+            class="btn"
+            onclick="
+            changeReviewStatus(
+                ${item.row},
+                'Approved'
+            )">
+
+            Approve
+
+            </button>
+
+            <button
+            class="btn"
+            onclick="
+            changeReviewStatus(
+                ${item.row},
+                'Rejected'
+            )">
+
+            Reject
+
+            </button>
+
+            `;
+
+        }
+
+        else if(item.status === "Approved"){
+
+            action=`
+
+            <button
+            class="btn"
+            onclick="
+            changeReviewStatus(
+                ${item.row},
+                'Rejected'
+            )">
+
+            Reject
+
+            </button>
+
+            `;
+
+        }
+
+        else{
+
+            action=`
+
+            <button
+            class="btn"
+            onclick="
+            changeReviewStatus(
+                ${item.row},
+                'Approved'
+            )">
+
+            Approve
+
+            </button>
+
+            `;
+
+        }
+
+
+        html += `
+
+        <tr>
+
+        <td>
+            ${escapeHTML(item.name)}
+        </td>
+
+        <td>
+            ${escapeHTML(item.phone)}
+        </td>
+
+        <td>
+            ${item.rating}/5
+        </td>
+
+        <td>
+            ${escapeHTML(item.review)}
+        </td>
+
+        <td>
+            <strong>
+            ${escapeHTML(item.status)}
+            </strong>
+        </td>
+
+        <td>
+            ${escapeHTML(item.submitted)}
+        </td>
+
+        <td>
+            ${action}
+        </td>
+
+        </tr>
+
+        `;
+
+    });
+
+
+    html += "</table>";
+
+    box.innerHTML=html;
+
+}
+
+
+/* ================= APPROVE / REJECT ================= */
+
+async function changeReviewStatus(row,status){
+
+    const pin =
+    ADMIN_PIN_SESSION ||
+    sessionStorage.getItem(
+        "sas_admin_pin"
+    );
+
+
+    if(!pin){
+
+        openModal("adminModal");
+
+        return;
+
+    }
+
+
+    const result =
+    await api("reviewStatus",{
+
+        pin:pin,
+
+        row:row,
+
+        status:status
+
+    });
+
+
+    if(result.ok){
+
+        alert(
+            status === "Approved"
+            ? "Review Approved"
+            : "Review Rejected"
+        );
+
+
+        await loadAdmin();
+
+        await loadReviews();
+
+    }
+    else{
+
+        alert(
+            result.message ||
+            "Review update failed."
+        );
+
+    }
+
+}
+
+
+/* ================= ADMIN TABS ================= */
+
+function showAdminTab(id){
+
+    document
+    .querySelectorAll(".admin-tab")
+    .forEach(function(tab){
+
+        tab.style.display="none";
+
+    });
+
+
+    const selected =
+    document.getElementById(id);
+
+
+    if(selected){
+
+        selected.style.display="block";
+
+    }
+
+}
+
+
+/* ================= ADMIN LOGOUT ================= */
+
+function adminLogout(){
+
+    ADMIN_PIN_SESSION="";
+
+    sessionStorage.removeItem(
+        "sas_admin_pin"
+    );
+
+    showPage("home");
+
+}
+
+
+/* ================= MESSAGE ================= */
+
+function showMessage(box,success,message){
+
+    box.className =
+    "message " +
+    (success ? "success" : "error");
+
+    box.innerText =
+    message || "";
+
+    box.style.display="block";
+
+}
+
+
+/* ================= SECURITY ================= */
+
+function escapeHTML(value){
+
+    return String(value ?? "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+
+/* ================= START ================= */
 
 document.addEventListener(
-    "DOMContentLoaded",
-    function(){
+"DOMContentLoaded",
+function(){
 
-        fillUserDetails();
+    loadReviews();
 
-        loadReviews();
-
-        const user =
-        getLoggedInUser();
-
-        if(user){
-
-            loadDashboardUser();
-
-        }
-
-    }
-);
+});
 
 </script>
 
